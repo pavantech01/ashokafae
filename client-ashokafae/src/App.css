@@ -1,0 +1,11 @@
+/* Enable scrolling while hiding the scrollbar */
+.scroll-container {
+  height: 100vh; /* Ensures full height */
+  overflow-y: auto; /* Enables scrolling */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE & Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome & Safari */
+}
