@@ -24,6 +24,9 @@ app.use(bodyParser.json());
 
 
 // API Routes
+app.get('/', (req, res) => {
+    res.send('Welcome to the Ashoka fae platform we are glad you ae here'); // You can customize this message
+});
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/payments', paymentRoutes);
