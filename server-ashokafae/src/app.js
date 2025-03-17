@@ -10,6 +10,8 @@ const productRoutes = require('./routes/product.routes');
 
 const bodyParser = require('body-parser');
 const contactRoutes = require('./routes/contact.routes');
+const connectDB = require('./config/db.config'); 
+
 
 
 const app = express();
