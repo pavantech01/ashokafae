@@ -3,7 +3,7 @@ import React from 'react';
 const AboutUs = () => (
     <div className="bg-white text-gray-800">
         {/* Header Section */}
-        <div className="relative text-center py-56 bg-[url('https://cdn.pixabay.com/photo/2016/11/18/22/21/bride-1837148_1280.jpg')] bg-cover bg-center text-white">
+        <div className="relative text-center py-56 bg-[url('https://res.cloudinary.com/dauyjkqmu/image/upload/v1737434634/samples/landscapes/beach-boat.jpg')] bg-cover bg-center text-white">
             <h1 className="text-5xl font-bold drop-shadow-md">About Us</h1>
             <p className="italic text-lg mt-2 drop-shadow-md">
                 Your Vision, Our Expertise – Making Every Event Magical!
@@ -54,17 +54,17 @@ const AboutUs = () => (
             </div>
 
         {/* Who We Are & Why Choose Us Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 px-6 md:px-20 :">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-20 :">
             <div className="bg-teal-50 p-10 rounded-lg flex justify-center items-center flex-col">
-                <h2 className="text-3xl font-bold">Who We Are</h2>
-                <p className="mt-4 text-xl text-center">
+                <h2 className="text-2xl font-bold">Who We Are</h2>
+                <p className="mt-4 text-lg text-center">
                     With extensive experience in the event management industry, our team consists of professional planners, designers, and coordinators dedicated to curating exceptional events. We collaborate with a wide network of vendors, venues, and entertainers to bring your dream event to life.
                 </p>
             </div>
 
-            <div className="bg-teal-50 p-4 rounded-lg flex justify-center items-center flex-col aspect-[7/3]">
-                <h2 className="text-3xl font-bold">Why Choose Us?</h2>
-                <ul className="mt-4 text-left text-xl space-y-2 list-none">
+            <div className="bg-teal-50 p-6 rounded-lg flex justify-center items-center flex-col aspect-[7/6]">
+                <h2 className="text-2xl font-bold ">Why Choose Us?</h2>
+                <ul className="mt-4 text-left text-lg space-y-2 list-none">
                     <li>✅ Personalized & Budget-Friendly Packages</li>
                     <li>✅ Strong Vendor Network For Hassle-Free Execution</li>
                     <li>✅ Commitment To Excellence & Client Satisfaction</li>
@@ -74,7 +74,7 @@ const AboutUs = () => (
 
         {/* Magical Ending Section */}
         <div className="text-center py-8 px-6 md:px-20 ">
-            <h2 className="text-2xl font-bold text-gray-800">Let's Create Something Magical!</h2>
+            <h2 className="text-xl font-bold text-gray-800">Let's Create Something Magical!</h2>
             <p className="mt-2">
                 From intimate gatherings to grand celebrations, Ashoka is here to make your event truly unforgettable. Let's discuss how we can turn your vision into reality.
             </p>

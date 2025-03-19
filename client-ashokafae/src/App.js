@@ -22,7 +22,7 @@ import Account from './pages/Account/Account';
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-gray-100">
         <Navbar />
         <Routes>
           <Route path="/" element={<WeddingPlannerWebsite />} />

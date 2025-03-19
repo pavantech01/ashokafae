@@ -202,7 +202,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="sticky top-0 left-0 w-full h-14 shadow-md z-50  flex items-center justify-between px-4 lg:px-6">
+        <nav className="sticky top-0 left-0 w-full h-14 shadow-md z-50  flex items-center justify-between px-4 lg:px-6 bg-white">
             {/* Logo */}
             <div className="flex items-center">
                 <Link to="/" className="block h-12">
