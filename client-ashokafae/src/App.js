@@ -16,6 +16,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import Gallery from './pages/Gallery/Gallery';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import FAQSection from './components/FAQSection/FAQSection';
+import Account from './pages/Account/Account';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/verify-otp" element={<VerifyOtp />} />
           <Route path="/services" element={<Services/>} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path='/account' element={<Account />} />
           <Route path="/faq" element={<FAQSection />} />
           <Route path="*" element={<PageNotFound />} />
 
