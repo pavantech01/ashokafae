@@ -17,6 +17,7 @@ import Gallery from './pages/Gallery/Gallery';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import FAQSection from './components/FAQSection/FAQSection';
 import Account from './pages/Account/Account';
+import Events from './pages/AshokaEvents/Events';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/authUser" element={<AuthPage />} />
           <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/product-form" element={<ProductForm />} />

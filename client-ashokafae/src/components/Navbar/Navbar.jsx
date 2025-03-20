@@ -215,12 +215,13 @@ const Navbar = () => {
             </div>
 
             {/* Centered Navigation */}
-            <div className="hidden lg:flex flex-1 justify-center items-center gap-6 tracking-widest">
-                {["HOME", "ABOUT", "SERVICES", "GALLERY", "CONTACT", "ACCOUNT"].map((item, index) => (
+            <div className="hidden lg:flex flex-1 justify-center items-center gap-6 tracking-widest cursor-pointer">
+                {["HOME", "ABOUT","EVENTS", "SERVICES", "GALLERY", "CONTACT", "ACCOUNT"].map((item, index) => (
                     <Link 
                         key={index} 
                         to={`/${item.toLowerCase()}`} 
-                        className="text-black text-xs no-underline hover:text-gray-600 transition duration-300"
+                        className="text-black text-xs no-underline hover:text-gray-800 
+                        hover:font-bold transition duration-200"
                     >
                         {item}
                     </Link>
@@ -248,7 +249,7 @@ const Navbar = () => {
                 {!isLoggedIn && (
                     <Link
                         to="/authUser "
-                        className="bg-emerald-500 text-lg text-white px-4 py-2 rounded hover:bg-emerald-600 transition duration-300"
+                        className="bg-emerald-500 text-lg text-white px-3 py-1 rounded no-underline cursor-pointer hover:bg-emerald-600 transition duration-300"
                     >
                         Sign Up
                     </Link>

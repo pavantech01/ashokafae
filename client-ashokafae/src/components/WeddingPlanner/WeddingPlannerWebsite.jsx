@@ -63,13 +63,13 @@ const WeddingPlannerWebsite = () => {
                             className="w-full h-full object-cover opacity-90"
                         /> */}
                         <img
-                            src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1742406042/A_highly_realistic_wedding_d7hv5b.webp"
+                            src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1742394734/6_v8ixbe.jpg"
                             alt="Wedding venue with arches"
-                            className="w-full h-full object-cover opacity-90"
+                            className="w-full h-full object-cover opacity-80"
                         />
                         <div className="absolute inset-0 bg-black/20" />
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-                            <p className="font-dancing text-lg font-semibold md:text-5xl mb-8">
+                            <p className="font-dancing text-lg font-semibold tracking-wide md:text-5xl mb-8">
                                 We Will Plan Details About <br />
                                 Your Wedding
                             </p>
@@ -96,7 +96,7 @@ const WeddingPlannerWebsite = () => {
                     {/* Left Side - Image */}
                     <div className="md:w-[350px] w-full flex justify-center mb-5 md:mb-0">
                         <img
-                            src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1742406233/beautifully_composed_wedding-themed_photograph_featuring_a_couple_m4ssas.webp"
+                            src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1742394735/9_i6u4ml.jpg"
                             alt="Wedding Couple"
                             className="w-full h-[450px] object-cover rounded-lg shadow-lg"
                         />
@@ -238,17 +238,14 @@ const WeddingPlannerWebsite = () => {
             </section>
 
             {/* About us section */}
-            <section className="bg-gray-100 flex flex-col md:flex-row justify-around mx-auto">
-                <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center p-6 md:p-12">
-                    {/* Left Section */}
-                    <div className="flex justify-start flex-col">
-                        <h3 className="text-gray-600 uppercase font-semibold tracking-widest p-6 ml-6">
-                            ASHOKA
-                        </h3>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
-                            Why Choose Us?
-                        </h2>
-                        <p className="text-gray-700 leading-relaxed mb-6">
+            <section className="bg-gray-100 py-7 px-16 md:ml-8 ml-8 md:mt-24 mt-24 md:max-h-screen">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+
+                    {/* Left Section - Content */}
+                    <div className="w-full md:w-1/2">
+                        <h3 className="text-gray-600 uppercase font-semibold tracking-widest">ASHOKA</h3>
+                        <h2 className="text-3xl font-bold text-gray-900 mt-2">Why Choose Us?</h2>
+                        <p className="text-gray-700 leading-relaxed mt-4 text-justify">
                             We create unique and memorable events tailored to your needs. Our
                             experienced team handles everything from planning to execution,
                             ensuring a seamless and stress-free experience. We provide{" "}
@@ -259,7 +256,7 @@ const WeddingPlannerWebsite = () => {
                         </p>
 
                         {/* Bullet Points */}
-                        <ul className="space-y-3 mb-6">
+                        <ul className="space-y-2 mt-6">
                             {[
                                 "Unique & Creative Events – We Make Your Event Special.",
                                 "Complete Planning – We Handle Everything For You.",
@@ -275,30 +272,34 @@ const WeddingPlannerWebsite = () => {
                         </ul>
 
                         {/* Contact Button */}
-                        <div className="bg-emerald-600 hover:bg-emerald-500 cursor-pointer text-white w-40 px-4 py-2 rounded-md text-lg font-semibold transition duration-300 ease-in-out">
+                        <button className="mt-5 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-md text-lg font-semibold transition duration-300">
                             CONTACT US
-                        </div>
+                        </button>
                     </div>
 
                     {/* Right Section - Image with Play Button */}
-                    <div className="relative flex justify-center md:justify-end">
-                        <img
-                            src="https://picsum.photos/1920/1080"
-                            alt="Wedding Event"
-                            className="w-full md:w-2/3 h-auto object-cover rounded-lg shadow-2xl"
-                        />
+                    <div className="w-full md:w-1/2 flex justify-center">
+                        <div className="relative">
+                            <img
+                                src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1742394735/10_q8qvvx.jpg"
+                                alt="Wedding Event"
+                                className="w-[340px] h-[450px] object-cover rounded-lg shadow-lg"
+                            />
+                        </div>
                     </div>
+
                 </div>
             </section>
+
 
             <TestimonialsSection />
             <div className="w-full min-h-screen bg-gray-100">
                 {/* Hero Section */}
                 <div
                     className="relative w-full h-[600px] bg-cover bg-center "
-                    style={{ backgroundImage: "url('https://picsum.photos/1950/1080?wedding,india')" }}
+                    style={{ backgroundImage: "url('https://images.unsplash.com/photo-1562967005-a3c85514d3e9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
                 >
-                    <div className="absolute inset-0 bg-emerald-300 bg-opacity-30 flex flex-col items-center justify-center text-center px-4">
+                    <div className="absolute inset-0 bg-emerald-400 bg-opacity-30 flex flex-col items-center justify-center text-center px-4">
                         <h1 className="text-white text-5xl md:text-5xl font-semibold tracking-wider font-rochester">
                             The Highest Happiness On Earth <br /> Is The Happiness Of Marriage.
                         </h1>
@@ -312,26 +313,26 @@ const WeddingPlannerWebsite = () => {
                 </div>
 
                 {/* Gallery Section */}
-                <div className="grid grid-cols-1 md:grid-cols-4">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-1 mt-1  ">
                     <img
-                        src="https://picsum.photos/1950/1080?Mehendi"
+                        src="https://images.unsplash.com/photo-1530785404354-f4ed0206a0d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Mehendi Hands"
-                        className="w-full h-80 object-cover"
+                        className="w-full h-80 object-cover rounded-md"
                     />
                     <img
-                        src="https://picsum.photos/1950/1080?Wedding,Cake"
+                        src="https://images.unsplash.com/photo-1614878257894-bcae7dd58054?q=80&w=1998&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Wedding Cake"
-                        className="w-full h-80 object-cover"
+                        className="w-full h-80 object-cover rounded-md"
                     />
                     <img
-                        src="https://picsum.photos/1950/1080?Wedding,Ceremony"
+                        src="https://images.stockcake.com/public/7/c/9/7c92b638-e2fe-4fdf-a724-cdb35486816a/joyful-wedding-ceremony-stockcake.jpg"
                         alt="Wedding Ceremony"
-                        className="w-full h-80 object-cover"
+                        className="w-full h-80 object-cover rounded-md"
                     />
                     <img
-                        src="https://picsum.photos/1950/1080?Wedding,Ring"
+                        src="https://res.cloudinary.com/dauyjkqmu/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1742394735/4_dtlzrp.jpg"
                         alt="Wedding ring"
-                        className="w-full h-80 object-cover"
+                        className="w-full h-80 object-cover rounded-md"
                     />
                 </div>
             </div>

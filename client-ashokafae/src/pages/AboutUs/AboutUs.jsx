@@ -3,9 +3,9 @@ import React from 'react';
 const AboutUs = () => (
     <div className="bg-white text-gray-800">
         {/* Header Section */}
-        <div className="relative text-center py-56 bg-[url('https://res.cloudinary.com/dauyjkqmu/image/upload/v1737434634/samples/landscapes/beach-boat.jpg')] bg-cover bg-center text-white">
+        <div className="relative text-center py-56 bg-[url('https://res.cloudinary.com/dauyjkqmu/image/upload/v1737434634/samples/landscapes/beach-boat.jpg')] bg-cover bg-center font-bold text-black">
             <h1 className="text-5xl font-bold drop-shadow-md">About Us</h1>
-            <p className="italic text-lg mt-2 drop-shadow-md">
+            <p className="italic text-xl font-bold mt-2 drop-shadow-md">
                 Your Vision, Our Expertise – Making Every Event Magical!
             </p>
         </div>
