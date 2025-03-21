@@ -25,13 +25,13 @@ const authService = {
                 console.error('Firebase Error:', firebaseError.code, firebaseError.message);
                 throw new Error(`Firebase error: ${firebaseError.message}`);
             }
-
             const salt = await bcrypt.genSalt(10);
             const hashedPassword = await bcrypt.hash(password, salt);
 
             // Generate OTP
             const otp = Math.floor(100000 + Math.random() * 900000).toString(); // 6-digit OTP
             const otpExpiry = Date.now() + 10 * 60 * 1000; // OTP valid for 10 minutes
+            
 
             console.log('Generated OTP:', otp); // Log the generated OTP
             console.log('OTP Expiry Time:', otpExpiry); // Log the OTP expiry time

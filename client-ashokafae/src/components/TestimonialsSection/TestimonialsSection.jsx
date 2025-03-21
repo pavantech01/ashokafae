@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
         <section className='bg-gray-100 min-h-screen'>
             <div className="max-w-7xl mx-auto px-8 py-20">
 
-                <div className="text-center mb-16">
+                <div className="text-center mb-8">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         Hear from our happy clients about their experiences with our event planning services

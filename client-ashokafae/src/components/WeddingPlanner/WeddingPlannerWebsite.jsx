@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import TestimonialsSection from "../TestimonialsSection/TestimonialsSection";
 import ContactUs from "../ContactUs/ContactUs";
+import FAQSection from "../FAQSection/FAQSection";
+// import TopButton from "../TopButton/TopButton";
 
 const teamMembers = [
     {
@@ -44,8 +46,10 @@ const WeddingPlannerWebsite = () => {
 
     return (
         <div className="min-h-screen">
-            <hr className="block md:hidden border-white border-solid border-2 bg-gray-50" />
+                    
 
+            <hr className="block md:hidden border-white border-solid border-2 bg-gray-50" />
+            {/* <TopButton/> */}
             {/* Hero Section */}
             <section className="relative min-h-screen">
                 <div className="relative">
@@ -293,6 +297,8 @@ const WeddingPlannerWebsite = () => {
 
 
             <TestimonialsSection />
+            <FAQSection/>
+
             <div className="w-full min-h-screen bg-gray-100">
                 {/* Hero Section */}
                 <div
@@ -311,7 +317,6 @@ const WeddingPlannerWebsite = () => {
                         </button>
                     </div>
                 </div>
-
                 {/* Gallery Section */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-1 mt-1  ">
                     <img

@@ -52,8 +52,8 @@ export default function FAQSection() {
     };
 
     return (
-        <section className="pt-16">
-            <div className="max-w-5xl mx-auto p-6">
+        <section className="m-10">
+            <div className="max-w-5xl mx-auto ">
                 {/* Title Section */}
                 <h2 className="text-center text-xl mt-6 font-semibold text-gray-600">Have Any Question</h2>
                 <h1 className="text-4xl font-semibold text-center my-3">Frequently Asked Questions</h1>

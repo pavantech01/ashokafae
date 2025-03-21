@@ -17,7 +17,7 @@ const Footer = () => {
 
                 {/* Navigation */}
                 <div>
-                    <h3 className="font-semibold text-lg ml-14 ">Navigation</h3>
+                    <h3 className="font-semibold text-xl ml-14 font-lato">Navigation</h3>
                     <ul className="mt-2 space-y-2 list-none ml-14 ">
                         <li><a href="/" className="text-white font-bold no-underline hover:underline">Home</a></li>
                         <li><a href="/services" className="text-white font-bold no-underline hover:underline">Our Services</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <ul className="mt-2 space-y-2 list-none">
+                <ul className="mt-8 space-y-2 list-none">
                 <li><a href="/account" className="text-white font-bold no-underline hover:underline">Account</a></li>
                 <li><a href="/contact" className="text-white font-bold no-underline hover:underline">Contact</a></li>
                 </ul>
@@ -37,10 +37,10 @@ const Footer = () => {
 
                 {/* Importance */}
                 <div>
-                    <h3 className="font-semibold text-lg">Importance</h3>
+                    <h3 className="font-semibold text-lg ">Importance</h3>
                     <ul className="mt-2 space-y-2">
                         <li><a href="/privacy-policy" className="text-white font-bold no-underline hover:underline">Privacy & Policy</a></li>
-                        <li><a href="/team-combination" className="text-white font-bold no-underline hover:underline">Team & Combination</a></li>
+                        <li><a href="/team-combination" className="text-white font-bold no-underline hover:underline">Terms & Conditions</a></li>
                         <li><a href="/faq" className="text-white font-bold no-underline hover:underline">FAQs</a></li>
                     </ul>
                 </div>

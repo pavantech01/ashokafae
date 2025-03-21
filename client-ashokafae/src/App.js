@@ -18,6 +18,7 @@ import PageNotFound from './pages/PageNotFound/PageNotFound';
 import FAQSection from './components/FAQSection/FAQSection';
 import Account from './pages/Account/Account';
 import Events from './pages/AshokaEvents/Events';
+import TopButton from './components/TopButton/TopButton';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-100">
         <Navbar />
+        <TopButton/>
         <Routes>
           <Route path="/" element={<WeddingPlannerWebsite />} />
           <Route path="/home" element={<WeddingPlannerWebsite />} />
