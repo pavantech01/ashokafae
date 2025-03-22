@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const ContactUs = () => {
     return (
-        <section className="bg-[#d2f0e4] py-12 px-6 pt-20">
+        <section className="bg-[#d2f0e4] py-12 px-6 pt-20 ">
             <div className="container mx-auto flex flex-col md:flex-row justify-center gap-12">
                 {/* Contact Info Section */}
                 <div className="bg-gray-100 p-10 rounded-lg shadow-md w-full md:w-1/3">
@@ -30,7 +30,7 @@ const ContactUs = () => {
 
                 {/* Contact Form Section */}
                 <div className="bg-gray-100 p-6 rounded-lg shadow-md w-full md:w-1/3">
-                    <h2 className="text-2xl tracking-wider font-bold text-green-700 mb-3 font-rochester">How We Can Serve You ?</h2>
+                    <h2 className="text-2xl tracking-wider font-bold text-green-700 mb- font-rochester">How We Can Serve You ?</h2>
                     <p>&nbsp;</p>
                     {/* <hr className="border-green-500 mb-4 w-6/7" /> */}
                     <form className="space-y-6">
@@ -60,7 +60,7 @@ const ContactUs = () => {
                             />
                         </div>
 
-                        <button className="w-full bg-green-500 text-white py-3 px-6 rounded-md shadow-md hover:bg-green-700 transition duration-300 transform hover:scale-105 relative top-8">
+                        <button className="w-full bg-green-500 text-white py-3 px-6 rounded-md shadow-md hover:bg-green-700 transition duration-300 transform hover:scale-105 lg:relative top-8">
                             SEND MESSAGE
                         </button>
                     </form>
