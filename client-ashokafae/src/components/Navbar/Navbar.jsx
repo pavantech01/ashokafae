@@ -267,13 +267,13 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div id="mobile-menu" className="lg:hidden bg-white absolute w-full shadow-md">
-                    <div className="px-6 pt-2 pb-4 space-y-4">
-                        {["HOME", "ABOUT", "SERVICES", "GALLERY", "CONTACT", "ACCOUNT"].map((item, index) => (
+               <div id="mobile-menu" className="lg:hidden bg-white absolute top-14 w-screen shadow-md" onClick={(e) => e.target.id === 'mobile-menu' && setIsMenuOpen(false)}>
+                    <div className="px-6 pt-2 pb-4 space-y-4 no-underline">
+                        {["HOME", "ABOUT","EVENTS", "SERVICES", "GALLERY", "CONTACT"].map((item, index) => (
                             <Link 
                                 key={index} 
                                 to={`/${item.toLowerCase()}`} 
-                                className="block text-black text-lg hover:text-gray-600 py-2 transition duration-300"
+                                className="block text-black text-lg hover:text-gray-600 py-2 transition duration-300 no-underline text-center justify-center cursor-pointer"
                             >
                                 {item}
                             </Link>
@@ -298,7 +298,7 @@ const Navbar = () => {
                         {!isLoggedIn && (
                             <Link
                                 to="/authUser "
-                                className="block text-center bg-emerald-500 text-white px-6 py-2 rounded hover:bg-emerald-600 transition duration-300"
+                                className="block text-center bg-emerald-500 text-white px-6 py-2 rounded hover:bg-emerald-600 transition duration-300 no-underline cursor-pointer"
                             >
                                 Sign Up
                             </Link>
