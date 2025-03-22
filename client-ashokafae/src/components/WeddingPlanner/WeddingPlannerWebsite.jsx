@@ -46,7 +46,7 @@ const WeddingPlannerWebsite = () => {
 
     return (
         <div className="min-h-screen">
-                    
+
 
             <hr className="block md:hidden border-white border-solid border-2 bg-gray-50" />
             {/* <TopButton/> */}
@@ -61,11 +61,11 @@ const WeddingPlannerWebsite = () => {
                     </div>
 
                     <div className="relative h-[100vh] overflow-hidden">
-                        {/* <img
+                        <img
                             src="https://images.unsplash.com/photo-1519379169146-d4b170447caa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="Wedding venue with arches"
                             className="w-full h-full object-cover opacity-90"
-                        /> */}
+                        />
                         <img
                             src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1742394734/6_v8ixbe.jpg"
                             alt="Wedding venue with arches"
@@ -73,7 +73,7 @@ const WeddingPlannerWebsite = () => {
                         />
                         <div className="absolute inset-0 bg-black/20" />
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-                            <p className="font-dancing text-lg font-semibold tracking-wide md:text-5xl mb-8">
+                            <p className="font-dancing text-lg font-semibold tracking-wide md:text-5xl mb-8 ">
                                 We Will Plan Details About <br />
                                 Your Wedding
                             </p>
@@ -219,32 +219,33 @@ const WeddingPlannerWebsite = () => {
                 </div>
 
                 {/* Team Carousel */}
-                <div className="relative w-full max-w-5xl mx-auto px-40 ">
+                <div className="relative w-full max-w-4xl mx-auto px-6 sm:px-10 md:px-20 lg:px-40 text-center">
+
+                    <div className="h-[3px] mt-2 mb-6"></div>
+
                     {/* Cards */}
-                    <div className="grid grid-cols-2 gap-10 justify-center pt-10">
+                    <div className="grid grid-cols-2 gap-6 sm:gap-10 justify-center">
                         {teamMembers.slice(startIndex, startIndex + 2).map((member, index) => (
                             <div key={index} className="flex flex-col items-center">
-                                <div className="rounded-lg shadow-md text-center transform transition-transform hover:scale-105">
+                                <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
                                     <img
                                         src={member.img}
                                         alt={member.name}
-                                        className="object-cover rounded-md shadow-md max-h-48 aspect-[3/4] w-full"
+                                        className="object-cover w-40 sm:w-52 h-52 rounded-lg"
                                     />
                                 </div>
-                                <h3 className="mt-2 text-lg font-semibold text-gray-800">{member.name}</h3>
-                                <p className="text-gray-600 font-bold">{member.role}</p>
+                                <h3 className="mt-3 text-lg sm:text-xl font-semibold text-gray-800">{member.name}</h3>
+                                <p className="text-sm sm:text-base text-gray-600 font-medium">{member.role}</p>
                             </div>
                         ))}
                     </div>
                 </div>
-
-
             </section>
 
-            {/* About us section */}
-            <section className="bg-gray-100 py-7 px-16 md:ml-8 ml-8 md:mt-24 mt-24 md:max-h-screen">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
+            {/* About us section */}
+            <section className="bg-gray-100 lg:py-7 lg:px-16 md:ml-8 ml-8 mr-8 md:mt-24 mt-24 md:max-h-screen md:px-14 sm:px-14">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
                     {/* Left Section - Content */}
                     <div className="w-full md:w-1/2">
                         <h3 className="text-gray-600 uppercase font-semibold tracking-widest">ASHOKA</h3>
@@ -258,7 +259,6 @@ const WeddingPlannerWebsite = () => {
                             approach, and timely execution, we make every event special.
                             Contact us today to make your event truly spectacular! 🎉
                         </p>
-
                         {/* Bullet Points */}
                         <ul className="space-y-2 mt-6">
                             {[
@@ -280,7 +280,6 @@ const WeddingPlannerWebsite = () => {
                             CONTACT US
                         </button>
                     </div>
-
                     {/* Right Section - Image with Play Button */}
                     <div className="w-full md:w-1/2 flex justify-center">
                         <div className="relative">
@@ -297,7 +296,7 @@ const WeddingPlannerWebsite = () => {
 
 
             <TestimonialsSection />
-            <FAQSection/>
+            <FAQSection />
 
             <div className="w-full min-h-screen bg-gray-100">
                 {/* Hero Section */}
@@ -309,12 +308,12 @@ const WeddingPlannerWebsite = () => {
                         <h1 className="text-white text-5xl md:text-5xl font-semibold tracking-wider font-rochester">
                             The Highest Happiness On Earth <br /> Is The Happiness Of Marriage.
                         </h1>
-                        <p className="text-white text-xl font-bold mt-20">
+                        {/* <p className="text-white text-xl font-bold mt-20">
                             📞(+91) 9876543210
                         </p>
                         <button className="mt-10 bg-white border-none hover:bg-emerald-400 text-green-500 hover:text-white text-lg font-bold py-2 px-6 rounded-lg shadow-lg transition duration-200">
                             CONTACT US
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 {/* Gallery Section */}
