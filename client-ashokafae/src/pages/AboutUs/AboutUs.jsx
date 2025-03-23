@@ -54,23 +54,24 @@ const AboutUs = () => (
             </div>
 
         {/* Who We Are & Why Choose Us Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-20 :">
-            <div className="bg-teal-50 p-10 rounded-lg flex justify-center items-center flex-col">
-                <h2 className="text-2xl font-bold">Who We Are</h2>
-                <p className="mt-4 text-lg text-center">
-                    With extensive experience in the event management industry, our team consists of professional planners, designers, and coordinators dedicated to curating exceptional events. We collaborate with a wide network of vendors, venues, and entertainers to bring your dream event to life.
-                </p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-20">
+    <div className="bg-teal-50 p-10 rounded-lg flex justify-center items-center flex-col h-full">
+        <h2 className="text-2xl font-bold">Who We Are</h2>
+        <p className="mt-4 text-lg text-center">
+            With extensive experience in the event management industry, our team consists of professional planners, designers, and coordinators dedicated to curating exceptional events. We collaborate with a wide network of vendors, venues, and entertainers to bring your dream event to life.
+        </p>
+    </div>
 
-            <div className="bg-teal-50 p-6 rounded-lg flex justify-center items-center flex-col aspect-[7/6]">
-                <h2 className="text-2xl font-bold ">Why Choose Us?</h2>
-                <ul className="mt-4 text-left text-lg space-y-2 list-none">
-                    <li>✅ Personalized & Budget-Friendly Packages</li>
-                    <li>✅ Strong Vendor Network For Hassle-Free Execution</li>
-                    <li>✅ Commitment To Excellence & Client Satisfaction</li>
-                </ul>
-            </div>
-        </div>
+    <div className="bg-teal-50 p-10 rounded-lg flex items-center flex-col h-full">
+        <h2 className="text-2xl font-bold ">Why Choose Us?</h2>
+        <ul className="mt-4 text-left text-lg space-y-2 list-none">
+            <li>✅ Personalized & Budget-Friendly Packages</li>
+            <li>✅ Strong Vendor Network For Hassle-Free Execution</li>
+            <li>✅ Commitment To Excellence & Client Satisfaction</li>
+        </ul>
+    </div>
+</div>
+
 
         {/* Magical Ending Section */}
         <div className="text-center py-8 px-6 md:px-20 ">
