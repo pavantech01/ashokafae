@@ -20,13 +20,25 @@ import Account from './pages/Account/Account';
 import Events from './pages/AshokaEvents/Events';
 import TopButton from './components/TopButton/TopButton';
 
+import WeddingEvent from './pages/NavPages/wedding-event';
+import EngagementEvent from './pages/NavPages/engagement-event';
+import AnniversaryCeremony from './pages/NavPages/anniversary-ceremony';
+import BirthdayParty from './pages/NavPages/birthday-party';
+import BabyShower from './pages/NavPages/baby-shower';
+import HaldiDecor from './pages/NavPages/haldi-decor';
+import MehndiCeremony from './pages/NavPages/mehndi-ceremony';
+import ReceptionStage from './pages/NavPages/reception-stage';
+import EntranceGate from './pages/NavPages/entrance-gate';
+import VidhiMandap from './pages/NavPages/vidhi-mandap';
+import SpecialEntry from './pages/NavPages/special-entry';
+import PhotoBooth from './pages/NavPages/photo-booth';
 
 function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-100">
         <Navbar />
-        <TopButton/>
+        <TopButton />
         <Routes>
           <Route path="/" element={<WeddingPlannerWebsite />} />
           <Route path="/home" element={<WeddingPlannerWebsite />} />
@@ -40,10 +52,25 @@ function App() {
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/product-form" element={<ProductForm />} />
           <Route path="/verify-otp" element={<VerifyOtp />} />
-          <Route path="/services" element={<Services/>} />
+          <Route path="/our-services" element={<Services />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path='/account' element={<Account />} />
           <Route path="/faq" element={<FAQSection />} />
+          {/* DropDown */}
+          <Route path="/events/wedding-event" element={<WeddingEvent />} />
+          <Route path="/events/engagement-event" element={<EngagementEvent />} />
+          <Route path="/events/anniversary-ceremony" element={<AnniversaryCeremony />} />
+          <Route path="/events/birthday-party" element={<BirthdayParty />} />
+          <Route path="/events/baby-shower" element={<BabyShower />} />
+          <Route path="/events/haldi-decoar" element={<HaldiDecor />} />
+          <Route path="/events/mehndi-ceremony" element={<MehndiCeremony />} />
+          <Route path="/events/reception-stage" element={<ReceptionStage />} />
+          <Route path="/events/entrance-gate" element={<EntranceGate />} />
+          <Route path="/events/vidhi-mandap" element={<VidhiMandap />} />
+          <Route path="/events/special-entry" element={<SpecialEntry />} />
+          <Route path="/events/photo-booth" element={<PhotoBooth />} />
+
+          {/* Notfound */}
           <Route path="*" element={<PageNotFound />} />
 
         </Routes>

@@ -1,5 +1,5 @@
 // import React, { useState, useEffect } from 'react';
-// import { Link, useNavigate } from 'react-router-dom';
+// import { Link, useNavigate, useLocation  } from 'react-router-dom';
 // import { FaBars, FaTimes } from "react-icons/fa";
 
 // const Navbar = () => {
@@ -7,6 +7,7 @@
 //     const [isLoggedIn, setIsLoggedIn] = useState(false);
 //     const [isAdmin, setIsAdmin] = useState(false);
 //     const navigate = useNavigate();
+//     const location = useLocation(); 
 
 //     useEffect(() => {
 //         const user = localStorage.getItem('user');
@@ -43,109 +44,148 @@
 //         navigate('/');
 //     };
 
+//     const navItems = ["HOME", "EVENTS", "OUR SERVICES", "GALLERY", "ABOUT", "CONTACT"];
+
 //     return (
-//         <nav className="absolute top-0 left-0 w-full h-20 shadow-md z-50 backdrop-blur-lg bg-white/30 flex items-center">
+//         <nav className="sticky top-0 left-0 w-full h-14 shadow-md z-50 flex items-center justify-between px-4 lg:px-6 bg-white">
+//             {/* Logo */}
+//             <div className="flex items-center">
+//                 <Link to="/" className="block h-12">
+//                     <img
+//                         src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1738000071/ashoka-events-logo_juz99g.png"
+//                         alt="Ashoka"
+//                         className="h-12 w-auto object-contain"
+//                     />
+//                 </Link>
+//             </div>
 
-//             <div className="w-full flex items-center justify-between px-4 lg:px-6">
-//                 {/* Logo */}
-//                 <div className="pl-2 sm:pl-4">
-//                     <Link to="/" className="block h-12">
-//                         <img
-//                             src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1738000071/ashoka-events-logo_juz99g.png"
-//                             alt="Ashoka"
-//                             className="h-12 w-auto object-contain"
-//                         />
-//                     </Link>
-//                 </div>
-
-//                 {/* Centered Navigation */}
-//                 <div className="hidden lg:flex flex-1 justify-center font-rounded items-center gap-6 px-4 tracking-widest">
-//                     {["HOME", "ABOUT", "SERVICES", "GALLERY", "CONTACT", "ACCOUNT"].map((item, index) => (
-//                         <Link 
-//                             key={index} 
-//                             to={`/${item.toLowerCase()}`} 
-//                             className="text-black text-2xl no-underline hover:text-gray-600 transition duration-300"
+//             {/* Centered Navigation */}
+//             <div className="hidden lg:flex flex-1 justify-center items-center gap-6 tracking-widest cursor-pointer">
+//                 {navItems.map((item, index) => (
+//                     <div className="relative group" key={index}>
+//                         <Link
+//                             to={`/${item.toLowerCase().replace(' ', '-')}`}
+//                             className="text-black no-underline text-xs hover:text-gray-800 
+//                             hover:font-bold transition duration-200"
 //                         >
 //                             {item}
 //                         </Link>
-//                     ))}
+//                         {item === "EVENTS" && (
+//                             <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg min-w-[200px]">
+//                                 <div className="relative group/nested">
+//                                     <Link to="/events/wedding-event" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">
+//                                         Wedding Event
+//                                         {/* <span className="float-right">▸</span> */}
+//                                     </Link>
+//                                     <div className="absolute left-full top-0 hidden group-hover/nested:block bg-white shadow-lg min-w-[200px] no-underline">
+//                                         <Link to="/events/haldi-decoar" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Haldi Decoar</Link>
+//                                         <Link to="/events/mehndi-ceremony" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Mehndi Ceremony</Link>
+//                                         <Link to="/events/reception-stage" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Reception Stage</Link>
+//                                         <Link to="/events/entrance-gate" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Entrance Gate</Link>
+//                                         <Link to="/events/vidhi-mandap" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Vidhi Mandap</Link>
+//                                         <Link to="/events/special-entry" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Special Entry</Link>
+//                                         <Link to="/events/photo-booth" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Photo Booth</Link>
+//                                     </div>
+//                                 </div>
+//                                 <Link to="/events/engagement-event" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Engagement Event</Link>
+//                                 <Link to="/events/anniversary-ceremony" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Anniversary Ceremony</Link>
+//                                 <Link to="/events/birthday-party" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Birthday Party</Link>
+//                                 <Link to="/events/baby-shower" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Baby Shower</Link>
+//                             </div>
+//                         )}
+//                     </div>
+//                 ))}
 
-//                     {isLoggedIn && (
-//                         <>
-//                             {isAdmin && (
-//                                 <Link to="/admin" className="text-black text-2xl hover:text-gray-600 transition duration-300">
-//                                     ADMIN
-//                                 </Link>
-//                             )}
-//                             <button
-//                                 onClick={handleLogout}
-//                                 className="text-black text-2xl hover:text-gray-600 transition duration-300 bg-transparent border-none"
-//                             >
-//                                 LOGOUT
-//                             </button>
-//                         </>
-//                     )}
-//                 </div>
+//                 {isLoggedIn && (
+//                     <Link to="/account" className="text-black no-underline text-xs hover:text-gray-800 hover:font-bold transition duration-200">
+//                         ACCOUNT
+//                     </Link>
+//                 )}
 
-//                 {/* Right Side Elements */}
-//                 <div className="hidden lg:flex items-center gap-2 pr-2 sm:pr-4">
-//                     {!isLoggedIn && (
-//                         <Link
-//                             to="/authUser"
-//                             className="bg-emerald-500 text-2xl text-white px-6 py-2 no-underline rounded hover:bg-emerald-600 transition duration-300"
+//                 {isLoggedIn && (
+//                     <>
+//                         {isAdmin && (
+//                             <Link to="/admin" className="text-black no-underline text-xs hover:text-gray-600 transition duration-300">
+//                                 ADMIN
+//                             </Link>
+//                         )}
+//                         <div
+//                             onClick={handleLogout}
+//                             className="text-black no-underline text-xs  hover:text-gray-600 transition duration-300 border-none tracking-widest bg-transparent cursor-pointer"
 //                         >
-//                             Sign Up
-//                         </Link>
-//                     )}
-//                 </div>
-
-//                 {/* Hamburger Menu Button */}
-//                 <button
-//                     id="hamburger-button"
-//                     onClick={toggleMenu}
-//                     className="lg:hidden p-2 mr-2 text-black hover:text-gray-600 bg-transparent border-0 focus:outline-none"
-//                 >
-//                     {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-//                 </button>
+//                             LOGOUT
+//                         </div>
+//                     </>
+//                 )}
 //             </div>
+
+//             {/* Right Side Elements */}
+//             <div className="hidden lg:flex items-start gap-2">
+//                 <a href="mailto:ashoka@gmail.com" className="text-sm text-gray-600 hover:text-gray-800 no-underline">
+//                     ashoka@gmail.com
+//                 </a>
+//                 {!isLoggedIn && (
+//                     <Link
+//                         to="/signup"
+//                         className="bg-emerald-500 text-sm text-white px-4 py-2 rounded no-underline cursor-pointer hover:bg-emerald-600 transition duration-300"
+//                     >
+//                         Sign Up
+//                     </Link>
+//                 )}
+//             </div>
+
+//             {/* Hamburger Menu Button */}
+//             <button
+//                 id="hamburger-button"
+//                 onClick={toggleMenu}
+//                 className="lg:hidden p-2 text-black no-underline hover:text-gray-600 bg-transparent border-0 focus:outline-none"
+//             >
+//                 {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+//             </button>
 
 //             {/* Mobile Menu */}
 //             {isMenuOpen && (
-//                 <div id="mobile-menu" className="lg:hidden bg-white/90 backdrop-blur-md absolute w-full shadow-md">
+//                 <div id="mobile-menu" className="lg:hidden bg-white absolute top-14 left-0 w-full shadow-md">
 //                     <div className="px-6 pt-2 pb-4 space-y-4">
-//                         {["HOME", "ABOUT", "SERVICES", "GALLERY", "CONTACT", "ACCOUNT"].map((item, index) => (
-//                             <Link 
-//                                 key={index} 
-//                                 to={`/${item.toLowerCase()}`} 
-//                                 className="block text-black text-lg hover:text-gray-600 py-2 transition duration-300"
-//                             >
-//                                 {item}
-//                             </Link>
+//                         {navItems.map((item, index) => (
+//                             <div className="relative" key={index}>
+//                                 <Link
+//                                     to={`/${item.toLowerCase().replace(' ', '-')}`}
+//                                     className="block text-black no-underline text-lg hover:text-gray-600 py-2 transition duration-300 text-center"
+//                                 >
+//                                     {item}
+//                                 </Link>
+//                             </div>
 //                         ))}
 
 //                         {isLoggedIn && (
 //                             <>
 //                                 {isAdmin && (
-//                                     <Link to="/admin" className="block text-black text-lg hover:text-gray-600 py-2 transition duration-300">
+//                                     <Link to="/admin" className="block text-black no-underline text-lg hover:text-gray-600 py-2 transition duration-300 text-center">
 //                                         ADMIN
 //                                     </Link>
 //                                 )}
 //                                 <button
 //                                     onClick={handleLogout}
-//                                     className="block w-full text-left text-black text-lg hover:text-gray-600 py-2 transition duration-300 bg-transparent"
+//                                     className="block w-full text-black no-underline text-lg hover:text-gray-600 py-2 transition duration-300 bg-transparent text-center"
 //                                 >
 //                                     LOGOUT
 //                                 </button>
 //                             </>
 //                         )}
 
-//                         {!isLoggedIn && (
-//                             <Link
-//                                 to="/authUser"
-//                                 className="block text-center bg-emerald-500 text-white px-6 py-2 rounded hover:bg-emerald-600 transition duration-300"
-//                             >
-//                                 Sign Up
-//                             </Link>
+//                         {isLoggedIn && (
+//                             <>
+//                                 <Link to="/account" className="block text-black no-underline text-lg hover:text-gray-600 py-2 transition duration-300 text-center">
+//                                     ACCOUNT
+//                                 </Link>
+//                                 <Link
+//                                     to="/signup"
+//                                     className="block text-center bg-emerald-500 text-white px-6 py-2 rounded hover:bg-emerald-600 transition duration-300 no-underline cursor-pointer"
+//                                 >
+//                                     Sign Up
+//                                 </Link>
+//                             </>
 //                         )}
 //                     </div>
 //                 </div>
@@ -157,7 +197,7 @@
 // export default Navbar;
 
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -165,6 +205,7 @@ const Navbar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation(); // Get the current location object
 
     useEffect(() => {
         const user = localStorage.getItem('user');
@@ -201,8 +242,10 @@ const Navbar = () => {
         navigate('/');
     };
 
+    const navItems = ["HOME", "EVENTS", "OUR SERVICES", "GALLERY", "ABOUT", "CONTACT"];
+
     return (
-        <nav className="sticky top-0 left-0 w-full h-14 shadow-md z-50  flex items-center justify-between px-4 lg:px-6 bg-white">
+        <nav className="sticky top-0 left-0 w-full h-14 shadow-md z-50 flex items-center justify-between px-4 lg:px-6 bg-white">
             {/* Logo */}
             <div className="flex items-center">
                 <Link to="/" className="block h-12">
@@ -216,27 +259,60 @@ const Navbar = () => {
 
             {/* Centered Navigation */}
             <div className="hidden lg:flex flex-1 justify-center items-center gap-6 tracking-widest cursor-pointer">
-                {["HOME", "ABOUT","EVENTS", "SERVICES", "GALLERY", "CONTACT", "ACCOUNT"].map((item, index) => (
-                    <Link 
-                        key={index} 
-                        to={`/${item.toLowerCase()}`} 
-                        className="text-black text-xs no-underline hover:text-gray-800 
-                        hover:font-bold transition duration-200"
-                    >
-                        {item}
+                {navItems.map((item, index) => {
+                    const path = `/${item.toLowerCase().replace(' ', '-')}`;
+                    const isActive = location.pathname === path; // Check if the current path matches
+
+                    return (
+                        <div className="relative group" key={index}>
+                            <Link
+                                to={path}
+                                className={`text-black no-underline text-xs hover:text-gray-800 hover:font-bold transition duration-200 ${isActive ? 'text-green-500 font-bold' : ''}`}
+                            >
+                                {item}
+                            </Link>
+                            {item === "EVENTS" && (
+                                <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg min-w-[200px]">
+                                    <div className="relative group/nested">
+                                        <Link to="/events/wedding-event" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">
+                                            Wedding Event
+                                        </Link>
+                                        <div className="absolute left-full top-0 hidden group-hover/nested:block bg-white shadow-lg min-w-[200px] no-underline">
+                                            <Link to="/events/haldi-decoar" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Haldi Decoar</Link>
+                                            <Link to="/events/mehndi-ceremony" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Mehndi Ceremony</Link>
+                                            <Link to="/events/reception-stage" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Reception Stage</Link>
+                                            <Link to="/events/entrance-gate" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Entrance Gate</Link>
+                                            <Link to="/events/vidhi-mandap" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Vidhi Mandap</Link>
+                                            <Link to="/events/special-entry" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Special Entry</Link>
+                                            <Link to="/events/photo-booth" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Photo Booth</Link>
+                                        </div>
+                                    </div>
+                                    <Link to="/events/engagement-event" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Engagement Event</Link>
+                                    <Link to="/events/anniversary-ceremony" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Anniversary Ceremony</Link>
+                                    <Link to="/events/birthday-party" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Birthday Party</Link>
+                                    <Link to="/events/baby-shower" className="block px-4 py-2 text-black no-underline hover:bg-gray-200">Baby Shower</Link>
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
+
+                {isLoggedIn && (
+                    <Link to="/account" className={`text-black no-underline text-xs hover:text-gray-800 hover:font-bold transition duration-200 ${location.pathname === '/account' ? 'text-green-500 font-bold' : ''}`}>
+                        ACCOUNT
                     </Link>
-                ))}
+                )}
 
                 {isLoggedIn && (
                     <>
                         {isAdmin && (
-                            <Link to="/admin" className="text-black text-xs hover:text-gray-600 transition duration-300">
+                            <Link to="/admin" className={`text-black no-underline text-xs hover:text-gray-600 transition duration-300 ${location.pathname === '/admin' ? 'text-green-500 font-bold' : ''}`}>
                                 ADMIN
                             </Link>
                         )}
                         <div
                             onClick={handleLogout}
-                            className="text-black text-xs no-underline hover:text-gray-600 transition duration-300 border-none tracking-widest bg-transparent "
+                            className="text-black no-underline text-xs hover:text-gray-600 transition duration-300 border-none tracking-widest bg-transparent cursor-pointer"
                         >
                             LOGOUT
                         </div>
@@ -245,11 +321,14 @@ const Navbar = () => {
             </div>
 
             {/* Right Side Elements */}
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-4">
+                <a href="mailto:ashoka@gmail.com" className="text-sm text-gray-600 hover:text-gray-800 no-underline items-center">
+                    ashoka@gmail.com
+                </a>
                 {!isLoggedIn && (
                     <Link
-                        to="/authUser "
-                        className="bg-emerald-500 text-lg text-white px-3 py-1 rounded no-underline cursor-pointer hover:bg-emerald-600 transition duration-300"
+                        to="/authUser"
+                        className="bg-emerald-500 text-sm text-white px-4 py-2 rounded no-underline cursor-pointer hover:bg-emerald-600 transition duration-300"
                     >
                         Sign Up
                     </Link>
@@ -260,49 +339,61 @@ const Navbar = () => {
             <button
                 id="hamburger-button"
                 onClick={toggleMenu}
-                className="lg:hidden p-2 text-black hover:text-gray-600 bg-transparent border-0 focus:outline-none"
+                className="lg:hidden p-2 text-black no-underline hover:text-gray-600 bg-transparent border-0 focus:outline-none"
             >
                 {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-               <div id="mobile-menu" className="lg:hidden bg-white absolute top-14 w-screen shadow-md" onClick={(e) => e.target.id === 'mobile-menu' && setIsMenuOpen(false)}>
-                    <div className="px-6 pt-2 pb-4 space-y-4 no-underline">
-                        {["HOME", "ABOUT","EVENTS", "SERVICES", "GALLERY", "CONTACT"].map((item, index) => (
-                            <Link 
-                                key={index} 
-                                to={`/${item.toLowerCase()}`} 
-                                className="block text-black text-lg hover:text-gray-600 py-2 transition duration-300 no-underline text-center justify-center cursor-pointer"
-                            >
-                                {item}
-                            </Link>
-                        ))}
+                <div id="mobile-menu" className="lg:hidden bg-white absolute top-14 left-0 w-full shadow-md">
+                    <div className="px-6 pt-2 pb-4 space-y-4">
+                        {navItems.map((item, index) => {
+                            const path = `/${item.toLowerCase().replace(' ', '-')}`;
+                            const isActive = location.pathname === path; // Check if the current path matches
+
+                            return (
+                                <div className="relative" key={index}>
+                                    <Link
+                                        to={path}
+                                        className={`block text-black no-underline text-lg hover:text-gray-600 py-2 transition duration-300 text-center ${isActive ? 'bg-green-500 text-white' : ''}`}
+                                    >
+                                        {item}
+                                    </Link>
+                                </div>
+                            );
+                        })}
 
                         {isLoggedIn && (
                             <>
                                 {isAdmin && (
-                                    <Link to="/admin" className="block text-black text-lg hover:text-gray-600 py-2 transition duration-300">
+                                    <Link to="/admin" className={`block text-black no-underline text-lg hover:text-gray-600 py-2 transition duration-300 text-center ${location.pathname === '/admin' ? 'bg-green-500 text-white' : ''}`}>
                                         ADMIN
                                     </Link>
                                 )}
                                 <button
                                     onClick={handleLogout}
-                                    className="block w-full text-left text-black text-lg hover:text-gray-600 py-2 transition duration-300 bg-transparent"
+                                    className="block w-full text-black no-underline text-lg hover:text-gray-600 py-2 transition duration-300 bg-transparent text-center"
                                 >
                                     LOGOUT
                                 </button>
                             </>
                         )}
 
-                        {!isLoggedIn && (
-                            <Link
-                                to="/authUser "
-                                className="block text-center bg-emerald-500 text-white px-6 py-2 rounded hover:bg-emerald-600 transition duration-300 no-underline cursor-pointer"
-                            >
-                                Sign Up
-                            </Link>
+                        {isLoggedIn && (
+                            <>
+                                <Link to="/account" className={`block text-black no-underline text-lg hover:text-gray-600 py-2 transition duration-300 text-center ${location.pathname === '/account' ? 'bg-green-500 text-white' : ''}`}>
+                                    ACCOUNT
+                                </Link>
+                                
+                            </>
                         )}
+                        <Link
+                                    to="/signup"
+                                    className="block text-center bg-emerald-500 text-white px-6 py-2 rounded hover:bg-emerald-600 transition duration-300 no-underline cursor-pointer"
+                                >
+                                    Sign Up
+                                </Link>
                     </div>
                 </div>
             )}
