@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#7befb2', // Ashoka Green
+        secondary: '#3EA997', // Light Gray
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
