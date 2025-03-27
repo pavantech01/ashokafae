@@ -5,10 +5,13 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Base_URL } from '../../utils/api';
 import OtpVerificationModal from "./OtpVerificationModal"; 
+import { useAuth } from '../../utils/AuthContext';
 
 const AuthPage = () => {
     const navigate = useNavigate();
     const [isSignUp, setIsSignUp] = useState(false);
+        const { login } = useAuth(); // Get user and logout from AuthContext
+    
     
     // Form state for controlled inputs
     const [formData, setFormData] = useState({
@@ -114,6 +117,7 @@ const AuthPage = () => {
                     localStorage.setItem('token', response.data.token);
                     if (response.data.user) {
                         localStorage.setItem('user', JSON.stringify(response.data.user));
+                        login(response.data.user); // Update user in AuthContext
                     }
                     
                     // Redirect to home page after successful login
