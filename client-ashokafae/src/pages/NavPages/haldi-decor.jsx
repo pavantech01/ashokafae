@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Gift, Package, Star, Phone, Camera, Sparkles } from 'lucide-react';
+import { Calendar, Package, Star, Phone, Camera, Sparkles } from 'lucide-react';
 
 function HaldiDecor() {
     return (
@@ -96,100 +96,6 @@ function HaldiDecor() {
                             <p className="text-gray-600">
                                 Personalized decor themes and setups
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Packages Section */}
-            <div className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-                        Haldi Ceremony Packages
-                    </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Haldi_Rasm_at_Indian_Wedding.jpg"
-                                alt="Basic Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Traditional Package</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Classic Haldi ceremony setup
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Basic decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        2-hour ceremony
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-yellow-600 text-white py-2 rounded-md hover:bg-yellow-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden transform scale-105">
-                            <div className="bg-yellow-600 text-white text-center py-2">
-                                Most Popular
-                            </div>
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Haldi_Rasm_at_Indian_Wedding.jpg"
-                                alt="Premium Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Premium Package</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Enhanced ceremony experience
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Premium decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        3-hour ceremony
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-yellow-600 text-white py-2 rounded-md hover:bg-yellow-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Haldi_Rasm_at_Indian_Wedding.jpg"
-                                alt="Luxury Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Luxury Package</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Ultimate Haldi experience
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Luxury decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        4-hour ceremony
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-yellow-600 text-white py-2 rounded-md hover:bg-yellow-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </div>

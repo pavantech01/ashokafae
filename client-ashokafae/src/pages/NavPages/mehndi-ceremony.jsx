@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Gift, Package, Star, Phone, Camera, Sparkles } from 'lucide-react';
+import { Calendar, Package, Star, Phone, Camera, Sparkles } from 'lucide-react';
 
 function MehndiCeremony() {
     return (
@@ -101,100 +101,7 @@ function MehndiCeremony() {
                 </div>
             </div>
 
-            {/* Packages Section */}
-            <div className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-                        Mehndi Packages
-                    </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1617307326200-453c92b1c6c2?auto=format&fit=crop&q=80"
-                                alt="Basic Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Classic Package</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Traditional Mehndi ceremony
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Basic decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        3-hour ceremony
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden transform scale-105">
-                            <div className="bg-green-600 text-white text-center py-2">
-                                Most Popular
-                            </div>
-                            <img
-                                src="https://images.unsplash.com/photo-1617307326208-453c92b1c6c3?auto=format&fit=crop&q=80"
-                                alt="Premium Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Premium Package</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Enhanced ceremony experience
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Premium decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        5-hour ceremony
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1617307326216-453c92b1c6c4?auto=format&fit=crop&q=80"
-                                alt="Luxury Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Luxury Package</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Ultimate Mehndi experience
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Luxury decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        Full-day ceremony
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    
             {/* Contact Section */}
             <div className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
