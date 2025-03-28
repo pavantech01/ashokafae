@@ -11,7 +11,7 @@ const AboutUs = () => (
         </div>
 
     {/* Start Planning Section */}
-    <div className="py-12 px-6 md:px-20">
+    <div className="py-12 px-56 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="md:pr-10">
                         <h2 className="text-2xl font-bold text-green-600 mb-4 flex justify-center">Start Planning Your Wedding</h2>
@@ -33,7 +33,7 @@ const AboutUs = () => (
             </div>
 
             {/* Our Mission Section */}
-            <div className="py-12 px-6 md:px-20 ">
+            <div className="py-12 px-10 md:px-20 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
                         <img
@@ -54,7 +54,7 @@ const AboutUs = () => (
             </div>
 
         {/* Who We Are & Why Choose Us Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 px-10 md:px-20">
     <div className="bg-teal-50 p-10 rounded-lg flex justify-center items-center flex-col h-full">
         <h2 className="text-2xl font-bold">Who We Are</h2>
         <p className="mt-4 text-lg text-center">
@@ -74,7 +74,7 @@ const AboutUs = () => (
 
 
         {/* Magical Ending Section */}
-        <div className="text-center py-8 px-6 md:px-20 ">
+        <div className="text-center py-8 px-6 md:px-20 mb-10">
             <h2 className="text-xl font-bold text-gray-800">Let's Create Something Magical!</h2>
             <p className="mt-2">
                 From intimate gatherings to grand celebrations, Ashoka is here to make your event truly unforgettable. Let's discuss how we can turn your vision into reality.
