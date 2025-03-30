@@ -4,17 +4,29 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
     return (
-        <div className="bg-gray-50 min-h-screen flex flex-col items-center justify-center px-4 py-10">
+        <div className="bg-gray-50 flex flex-col items-center justify-center">
             {/* Page Title */}
-            <div className="text-center mb-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Services</h2>
-                <p className="text-gray-600 mt-2 max-w-lg">
-                    We offer a comprehensive range of wedding planning services to make your special day perfect.
-                </p>
+
+            <div className="relative h-[400px] min-w-full mb-10">
+                <img
+                    src="https://plus.unsplash.com/premium_photo-1661477577453-2736f4c0acf6?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="About Us"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50">
+                    <div className="container mx-auto px-4 h-full flex flex-col items-center justify-center">
+                        <h1 className="text-6xl font-light text-white mb-4 font-serif italic">
+                            Our Services
+                        </h1>
+                        <p className="text-xl text-gray-200 max-w-2xl text-center">
+                            We offer a comprehensive range of wedding planning services to make your special day perfect.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6 w-full max-w-4xl">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6 w-full max-w-4xl mb-10">
                 {[
                     { icon: <FaCamera size={28} className="text-secondary" />, title: "Photography & Video", description: "Capture every precious moment with our professional services." },
                     { icon: <FaSeedling size={28} className="text-secondary" />, title: "Floral Arrangements", description: "Beautiful and elegant floral designs to match your wedding theme." },

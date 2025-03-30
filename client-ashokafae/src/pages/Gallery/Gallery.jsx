@@ -9,7 +9,7 @@ function Gallery() {
                 { url: "https://res.cloudinary.com/dauyjkqmu/image/upload/v1737542789/Chidren_birthday_qz9dwn.jpg", alt: "Floral Arrangements" },
                 { url: "https://res.cloudinary.com/dauyjkqmu/image/upload/v1737542787/Birthday_35th_ugprgs.jpg", alt: "Reception Decor" },
                 { url: "https://res.cloudinary.com/dauyjkqmu/image/upload/v1737542790/Sideview_decor_cmqvli.jpg", alt: "Wedding Details" }
-                
+
             ]
         },
         {
@@ -25,30 +25,49 @@ function Gallery() {
 
     const testimonials = [
         {
-            name: "Sarah & James",
-            review: "Our wedding day was absolutely perfect thanks to the amazing team!",
+            name: "Rahul & Priya",
+            review: "Our wedding day in Yavatmal was absolutely perfect thanks to the amazing team!",
             rating: 5
         },
         {
-            name: "Emily & Michael",
-            review: "They took care of every detail and made our dream wedding come true.",
+            name: "Sneha & Rohan",
+            review: "They took care of every detail and made our dream wedding in Nagpur come true.",
             rating: 5
         },
         {
-            name: "Jessica & David",
-            review: "Professional, creative, and absolutely wonderful to work with!",
+            name: "Aisha & Karan",
+            review: "Professional, creative, and absolutely wonderful to work with in Amaravati!",
             rating: 5
         }
     ];
 
     return (
-        <div className="bg-gradient-to-b from-pink-50 to-white min-h-screen relative top-16">
+        <div className="bg-gradient-to-b from-pink-50 to-white min-h-screen">
+            <div className="relative h-[400px] min-w-full mb-10">
+                <img
+                    src="https://images.unsplash.com/photo-1626021524168-a800ae7ae356?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="About Us"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50">
+                    <div className="container mx-auto px-4 h-full flex flex-col items-center justify-center">
+                        <h1 className="text-6xl font-light text-white mb-4 font-serif italic">
+                            Our Gallery
+                        </h1>
+                        <p className="text-xl text-gray-200 max-w-2xl text-center">
+                            Beautiful moments from our wonderful events
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div className="max-w-7xl mx-auto px-4 py-12">
                 {/* Header */}
-                <div className="text-center mb-12">
+
+
+                {/* <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-navy-900 mb-4">Our Gallery</h1>
                     <p className="text-gray-600 text-lg">Beautiful moments from our wonderful events</p>
-                </div>
+                </div> */}
 
                 {/* Gallery Grid */}
                 {galleryImages.map((section, index) => (
@@ -57,7 +76,7 @@ function Gallery() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {section.images.map((image, imgIndex) => (
                                 <div key={imgIndex} className="group relative overflow-hidden rounded-lg shadow-md">
-                                    <img 
+                                    <img
                                         src={image.url}
                                         alt={image.alt}
                                         className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"

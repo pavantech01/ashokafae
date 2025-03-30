@@ -119,21 +119,16 @@ const WeddingPlannerWebsite = () => {
 
                         {/* Description */}
                         <p className="text-gray-600 text-lg leading-relaxed mt-4">
-                            Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus.
-                            Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo. Vestibulum sit amet ipsum
-                            vitae mauris mattis vulputate lacinia nec neque.
+                            At Ashoka, we craft unforgettable Indian weddings, blending tradition with modern elegance. From venue selection to exquisite décor, our expert team ensures your special day is truly extraordinary.
                         </p>
 
                         <p className="text-gray-500 mt-3 text-base leading-relaxed hidden md:block">
-                            Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus.
-                            Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.
+                            From the vibrant Mehendi to the grand Baraat, we bring your vision to life with creativity and precision. Let us handle every detail while you cherish the moments that matter most.
                         </p>
 
                         {/* Contact Button */}
                         <div className="mt-6">
-                            <button className="bg-green-600 text-white text-lg font-semibold px-8 py-3 rounded-md shadow-md hover:bg-green-700 transition duration-300 ease-in-out">
-                                CONTACT US
-                            </button>
+                            <a href="tel:+919876543210" className="bg-green-600 no-underline text-white text-lg font-semibold px-8 py-3 rounded-md shadow-md hover:bg-green-700 transition duration-300 ease-in-out">CONTACT US</a>
                         </div>
                     </div>
 
