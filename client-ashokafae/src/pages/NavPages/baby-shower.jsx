@@ -164,7 +164,7 @@ function BabyShower() {
                 <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#007F5F] mb-8">
                     Baby Shower Celebration
                 </h2>
-                
+
                 {/* Responsive Card Grid */}
                 {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-5"> */}
                 {/* <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 px-8">
@@ -186,22 +186,35 @@ function BabyShower() {
                     ))}
                 </div> */}
                 <div class="grid grid-cols-2 gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    {images.map((image, index) => (
-        <div key={index} className="bg-green-200 p-4 rounded-lg shadow-lg">
-            <img
-                src={image}
-                alt="Baby Shower"
-                className="w-full h-[180px] sm:h-[200px] md:h-[220px] object-cover rounded-md"
-            />
-            <div className="flex justify-between items-center mt-4 px-2">
-                <button className="bg-white text-blue-600 px-4 py-2 rounded-lg shadow-md">
-                    Book Now
-                </button>
-                <Heart className="text-red-500 w-6 h-6 cursor-pointer" />
-            </div>
-        </div>
-    ))}
-</div>
+                    {images.map((image, index) => (
+                        // <div key={index} className="bg-green-200 p-4 rounded-lg shadow-lg">
+                        //     <img
+                        //         src={image}
+                        //         alt="Baby Shower"
+                        //         className="w-full h-[180px] sm:h-[200px] md:h-[220px] object-cover rounded-md"
+                        //     />
+                        //     <div className="flex justify-between items-center mt-4 px-2">
+                        //         <button className="bg-white text-blue-600 px-4 py-2 rounded-lg shadow-md">
+                        //             Book Now
+                        //         </button>
+                        //         <Heart className="text-red-500 w-6 h-6 cursor-pointer" />
+                        //     </div>
+                        // </div>
+                        <div className="bg-green-200  rounded-lg shadow-lg">
+                            <img
+                                src={image} // Replace with your actual image source
+                                alt="Baby Shower"
+                                className="w-full h-[180px] sm:h-[200px] md:h-[220px] object-cover rounded-md"
+                            />
+                            <div className="flex justify-between items-center px-2 py-3">
+                                <button className="cursor-pointer border-2 border-secondary text-secondary hover:bg-green-500 hover:text-white px-4 py-2 rounded-lg shadow-md">
+                                    Book Now
+                                </button>
+                                <Heart className="text-red-500 w-6 h-6 cursor-pointer" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
             </div>
 
