@@ -104,11 +104,6 @@ const Navbar = () => {
                     );
                 })}
 
-                {isLoggedIn && (
-                    <Link to="/account" className={`text-black no-underline  text-xs hover:text-gray-800 hover:font-bold transition duration-200 ${location.pathname === '/account' ? 'text-green-500 font-bold' : ''}`}>
-                        ACCOUNT
-                    </Link>
-                )}
 
                 {isLoggedIn && (
                     <>
