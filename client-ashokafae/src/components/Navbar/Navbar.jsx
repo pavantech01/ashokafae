@@ -125,7 +125,7 @@ const Navbar = () => {
             {/* Right Side Elements */}
             <div className="hidden lg:flex items-center gap-4">
                 <a href="mailto:ashoka@gmail.com" className=" text-gray-600 hover:text-gray-800 no-underline text-xs items-center">
-                    ashoka@gmail.com
+                    ashokafae@gmail.com
                 </a>
                 {!isLoggedIn && (
                     <Link
