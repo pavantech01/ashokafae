@@ -55,8 +55,8 @@ const TestimonialsSection = () => {
     };
 
     return (
-        <section className='bg-gray-100 min-h-screen'>
-            <div className="max-w-7xl mx-auto px-8 py-20">
+        <section className='bg-gray-100 min-h-screen p-20'>
+            <div className="max-w-5xl mx-auto py-10">
 
                 <div className="text-center mb-8">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
                                 key={index}
                                 className={`w-full sm:w-80 transition-all duration-500 ${index === 0 ? 'opacity-100 scale-100' : 'opacity-100 scale-90'}`}
                             >
-                                <div className={`rounded-xl shadow-lg p-8 h-[520px] flex flex-col ${testimonial.type === 'mint'
+                                <div className={`rounded-xl shadow-lg p-8 h-[450px] flex flex-col ${testimonial.type === 'mint'
                                     ? 'bg-teal-50'
                                     : testimonial.type === 'contrast'
                                         ? 'bg-white'
@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
                                     <img
                                         src={testimonial.image}
                                         alt={`Testimonial by ${testimonial.name}`}
-                                        className="w-full h-64 object-cover rounded-lg mb-6"
+                                        className="w-full h-64 object-cover rounded-lg mb-6" // Ensure the image takes full width of the card
                                     />
                                     <p className="text-gray-600 mb-6 flex-grow">
                                         "{testimonial.text}"

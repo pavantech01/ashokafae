@@ -62,7 +62,7 @@ export default function FAQSection() {
                 {/* FAQ Items */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="border rounded-lg shadow-sm bg-white">
+                        <div key={index} className="border rounded-lg shadow-sm">
                             <button
                                 className="w-full text-left p-4 flex justify-between items-center text-lg font-medium bg-gray-100 hover:bg-gray-200 transition-all"
                                 onClick={() => toggleFAQ(index)}
@@ -75,7 +75,7 @@ export default function FAQSection() {
                                 />
                             </button>
                             {openIndex === index && (
-                                <div className="p-4 text-gray-700 border-t">{faq.answer}</div>
+                                <div className="p-4 text-white bg-secondary border-t">{faq.answer}</div>
                             )}
                         </div>
                     ))}

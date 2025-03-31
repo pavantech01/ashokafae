@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Calendar, Gift, Package, Star, Phone } from 'lucide-react';
+import { Heart, Calendar, Package, Star, Phone } from 'lucide-react';
 
 function WeddingEvent() {
     return (
@@ -60,100 +60,7 @@ function WeddingEvent() {
                 </div>
             </div>
 
-            {/* Packages Section */}
-            <div className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-                        Wedding Packages
-                    </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80"
-                                alt="Classic Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Classic Wedding</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Elegant and timeless celebration
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Classic decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        Full-day event
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-secondary text-white py-2 rounded-md hover:bg-secondary transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden transform scale-105">
-                            <div className="bg-secondary text-white text-center py-2">
-                                Most Popular
-                            </div>
-                            <img
-                                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80"
-                                alt="Luxury Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Luxury Wedding</h3>
-                                <p className="text-gray-600 mb-4">
-                                    The complete luxury experience
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Premium decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        Multi-day events
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-secondary text-white py-2 rounded-md hover:bg-secondary transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80"
-                                alt="Royal Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Royal Wedding</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Extraordinary celebration
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Exclusive design & decor
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        Week-long celebrations
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-secondary text-white py-2 rounded-md hover:bg-secondary transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            
             {/* Contact Section */}
             <div className="py-20 bg-white">
                 <div className="container mx-auto px-4">

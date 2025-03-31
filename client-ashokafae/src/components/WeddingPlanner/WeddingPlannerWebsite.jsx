@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
+// import { FaPhoneAlt } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import TestimonialsSection from "../TestimonialsSection/TestimonialsSection";
@@ -77,9 +77,9 @@ const WeddingPlannerWebsite = () => {
                                 We Will Plan Details About <br />
                                 Your Wedding
                             </p>
-                            <button className="mt-6 px-6 py-3 bg-emerald-500 rounded-full text-base items-center cursor-pointer">
+                            {/* <button className="mt-6 px-6 py-3 bg-emerald-500 rounded-full text-base items-center cursor-pointer">
                                 <FaPhoneAlt className="text-blue-500" />&nbsp; <span className="text-white">+91 9876543210</span>
-                            </button>
+                            </button> */}
 
                             <div
                                 className="absolute bottom-8 animate-bounce text-xl cursor-pointer"
@@ -128,7 +128,7 @@ const WeddingPlannerWebsite = () => {
 
                         {/* Contact Button */}
                         <div className="mt-6">
-                            <a href="tel:+919876543210" className="bg-green-600 no-underline text-white text-lg font-semibold px-8 py-3 rounded-md shadow-md hover:bg-green-700 transition duration-300 ease-in-out">CONTACT US</a>
+                            <a href="tel:+919876543210" className="bg-green-600 no-underline text-white text-lg font-semibold px-6 py-3 rounded-md shadow-md hover:bg-green-700 transition duration-300 ease-in-out">CONTACT US</a>
                         </div>
                     </div>
 
