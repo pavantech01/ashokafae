@@ -516,28 +516,13 @@ const Navbar = () => {
                 })}
 
 
-                {isLoggedIn && (
-                    <>
-                        {isAdmin && (
-                            <Link to="/admin" className={`text-black no-underline text-xs hover:text-gray-600 transition duration-300 ${location.pathname === '/admin' ? 'text-green-500 font-bold' : ''}`}>
-                                ADMIN
-                            </Link>
-                        )}
-                        <div
-                            onClick={handleLogout}
-                            className="text-black no-underline text-xs  hover:text-gray-600 transition duration-300 border-none tracking-widest bg-transparent cursor-pointer"
-                        >
-                            LOGOUT
-                        </div>
-                    </>
-                )}
             </div>
 
             {/* Right Side Elements */}
             <div className="hidden lg:flex items-center gap-4">
-                <a href="mailto:ashoka@gmail.com" className=" text-gray-600 hover:text-gray-800 no-underline text-xs items-center">
+                {/* <a href="mailto:ashoka@gmail.com" className=" text-gray-600 hover:text-gray-800 no-underline text-xs items-center">
                     ashokafae@gmail.com
-                </a>
+                </a> */}
                 {!isLoggedIn && (
                     <Link
                         to="/authUser"
@@ -545,6 +530,22 @@ const Navbar = () => {
                     >
                         Sign Up
                     </Link>
+                )}
+
+                {isLoggedIn && (
+                    <>
+                        {isAdmin && (
+                            <Link to="/admin" className={`block py-2 text-black no-underline text-sm  hover:text-gray-600 font-rounded capitalize transition duration-300 text-center ${location.pathname === '/admin' ? 'bg-green-500 text-white' : ''}`}>
+                                ADMIN
+                            </Link>
+                        )}
+                        <button
+                            onClick={handleLogout}
+                            className=" bg-secondary text-white px-2 py-2 font-rounded tracking-wider rounded no-underline text-xs border-secondary cursor-pointer hover:bg-slate-500 transition duration-300"
+                        >
+                            LOGOUT
+                        </button>
+                    </>
                 )}
             </div>
 
@@ -620,7 +621,7 @@ const Navbar = () => {
                             );
                         })}
 
-                        {isLoggedIn && (
+                        {/* {isLoggedIn && (
                             <>
                                 {isAdmin && (
                                     <Link to="/admin" className={`block py-2 text-black no-underline text-sm  hover:text-gray-600 font-rounded capitalize transition duration-300 text-center ${location.pathname === '/admin' ? 'bg-green-500 text-white' : ''}`}>
@@ -634,7 +635,7 @@ const Navbar = () => {
                                     LOGOUT
                                 </button>
                             </>
-                        )}
+                        )} */}
 
                         {/* {isLoggedIn && (
                             <>
@@ -650,6 +651,22 @@ const Navbar = () => {
                             >
                                 Sign Up
                             </Link>
+                        )}
+
+                        {isLoggedIn && (
+                            <>
+                                {isAdmin && (
+                                    <Link to="/admin" className={`block py-2 text-black no-underline text-sm  hover:text-gray-600 font-rounded capitalize transition duration-300 text-center ${location.pathname === '/admin' ? 'bg-green-500 text-white' : ''}`}>
+                                        ADMIN
+                                    </Link>
+                                )}
+                                <button
+                                    onClick={handleLogout}
+                                    className="block w-full text-black no-underline text-xs hover:text-gray-600 py-2 font-rounded capitalize transition duration-300 bg-transparent text-center"
+                                >
+                                    LOGOUT
+                                </button>
+                            </>
                         )}
                     </div>
                 </div>

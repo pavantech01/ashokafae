@@ -21,7 +21,7 @@ const teamMembers = [
         img: "https://images.unsplash.com/photo-1624395213043-fa2e123b2656?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     }
 ];
-
+// eslint-disable-next-line
 const smoothScroll = () => {
     const targetPosition = document.querySelector('#second-page').offsetTop;
     const startPosition = window.scrollY;
