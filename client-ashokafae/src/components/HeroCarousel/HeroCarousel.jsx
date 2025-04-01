@@ -3,7 +3,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { motion } from "framer-motion";
 
 const images = [
-    "https://res.cloudinary.com/dauyjkqmu/image/upload/v1742394734/6_v8ixbe.jpg",
+    "https://images.unsplash.com/photo-1519379169146-d4b170447caa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://res.cloudinary.com/dauyjkqmu/image/upload/v1743324129/Muslim_Nikah_Ceremony_Decoration_Idea_s_gs8ygx.jpg",
     "https://res.cloudinary.com/dauyjkqmu/image/upload/v1743155869/0da2cac5-d59e-44bd-ae3f-5f311e2c280d_nxm9m2.jpg",
 ];
