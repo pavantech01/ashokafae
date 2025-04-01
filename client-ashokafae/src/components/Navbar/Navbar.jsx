@@ -535,13 +535,17 @@ const Navbar = () => {
                 {isLoggedIn && (
                     <>
                         {isAdmin && (
-                            <Link to="/admin" className={`block py-2 text-black no-underline text-sm  hover:text-gray-600 font-rounded capitalize transition duration-300 text-center ${location.pathname === '/admin' ? 'bg-green-500 text-white' : ''}`}>
-                                ADMIN
+                            <Link to="/admin"
+                                >
+                                <button className="bg-yellow-500 text-white px-4 py-2 font-rounded capitalize  rounded no-underline text-xs cursor-pointer border-2 border-yellow-600 hover:bg-slate-500 hover:border-slate-600 transition duration-400">
+                                    ADMIN
+                                </button>
+
                             </Link>
                         )}
                         <button
                             onClick={handleLogout}
-                            className=" bg-secondary text-white px-2 py-2 font-rounded tracking-wider rounded no-underline text-xs border-secondary cursor-pointer hover:bg-slate-500 transition duration-300"
+                            className=" bg-secondary text-white px-2 py-2 font-rounded tracking-wider rounded no-underline text-xs border-secondary cursor-pointer hover:bg-slate-500 transition duration-400"
                         >
                             LOGOUT
                         </button>
