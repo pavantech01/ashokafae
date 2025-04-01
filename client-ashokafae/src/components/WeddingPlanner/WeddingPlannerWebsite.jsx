@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+// import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 // import { FaPhoneAlt } from "react-icons/fa";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import TestimonialsSection from "../TestimonialsSection/TestimonialsSection";
 import ContactUs from "../ContactUs/ContactUs";
 import FAQSection from "../FAQSection/FAQSection";
+import HeroCarousel from "../HeroCarousel/HeroCarousel";
 // import TopButton from "../TopButton/TopButton";
 
 const teamMembers = [
@@ -50,8 +51,9 @@ const WeddingPlannerWebsite = () => {
 
             <hr className="block md:hidden border-white border-solid border-2 bg-gray-50" />
             {/* <TopButton/> */}
-            {/* Hero Section */}
-            <section className="relative min-h-screen">
+            {/* Hero Section */} 
+            <HeroCarousel/>           
+            {/* <section className="relative min-h-screen">
                 <div className="relative">
                     <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer">
                         <MdChevronLeft className="w-12 h-16 text-emerald-500" />
@@ -77,9 +79,6 @@ const WeddingPlannerWebsite = () => {
                                 We Will Plan Details About <br />
                                 Your Wedding
                             </p>
-                            {/* <button className="mt-6 px-6 py-3 bg-emerald-500 rounded-full text-base items-center cursor-pointer">
-                                <FaPhoneAlt className="text-blue-500" />&nbsp; <span className="text-white">+91 9876543210</span>
-                            </button> */}
 
                             <div
                                 className="absolute bottom-8 animate-bounce text-xl cursor-pointer"
@@ -91,8 +90,8 @@ const WeddingPlannerWebsite = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-
+            </section> */}
+            
             {/* Second Landing Page */}
             <section className="w-full bg-gray-100 flex justify-center py-16 md:py-24 pt-28" id="second-page">
                 <div className="container mx-auto flex flex-col md:flex-row items-center px-5 md:px-24">
