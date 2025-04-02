@@ -29,13 +29,13 @@ const HeroCarousel = () => {
 
     return (
         <section className="relative w-full h-screen overflow-hidden">
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full lg:h-[94vh]">
                 {images.map((img, index) => (
                     <motion.img
                         key={index}
                         src={img}
                         alt={`Slide ${index}`}
-                        className="absolute w-full h-full object-cover transition-opacity duration-1000"
+                        className="absolute w-full h-full object-cover transition-opacity duration-300"
                         animate={{ opacity: index === currentIndex ? 1 : 0 }}
                     />
                 ))}
@@ -51,7 +51,7 @@ const HeroCarousel = () => {
                 {/* Left Arrow */}
                 <button
                     onClick={prevSlide}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-transparent border-none text-white"
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-transparent border-none text-white"
                 >
                     <MdChevronLeft className="w-8 h-8" />
                 </button>
@@ -59,7 +59,7 @@ const HeroCarousel = () => {
                 {/* Right Arrow */}
                 <button
                     onClick={nextSlide}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-transparent border-none p-3 rounded-full text-white"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-transparent border-none p-3 rounded-full text-white"
                 >
                     <MdChevronRight className="w-8 h-8" />
                 </button>
