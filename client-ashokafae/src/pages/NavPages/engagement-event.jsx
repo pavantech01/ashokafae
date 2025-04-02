@@ -1,11 +1,11 @@
 import React from 'react';
-import { Heart, Calendar, Gift, Package, Star, Phone } from 'lucide-react';
+import { Heart, Calendar,  Package, Star, Phone } from 'lucide-react';
 
 function EngagementEvent() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50">
             {/* Hero Section */}
-            <div className="relative h-[600px]">
+            {/* <div className="relative h-[600px]">
                 <img
                     src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80"
                     alt="Engagement Celebration"
@@ -24,6 +24,26 @@ function EngagementEvent() {
                                 Plan Your Engagement
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div> */}
+
+            <div className="relative h-[400px] min-w-full">
+                <img
+                    src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80"
+                    alt="Engagement Celebration"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50">
+                    <div className="container mx-auto px-4 h-full flex flex-col items-center justify-center">
+                        <h1 className="text-6xl font-light text-white mb-4 font-serif italic">
+                            Begin Your Forever Story
+                        </h1>
+                        <p className="text-xl text-gray-200 max-w-2xl text-center">
+                            Make your engagement special with our perfectly curated celebration packages                        </p>
+                        <button className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-50 transition duration-300 mt-6 cursor-pointer">
+                            Plan Your Engagement
+                        </button>
                     </div>
                 </div>
             </div>
@@ -60,99 +80,7 @@ function EngagementEvent() {
                 </div>
             </div>
 
-            {/* Packages Section */}
-            <div className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-                        Engagement Packages
-                    </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1511479877362-6780647b06b5?auto=format&fit=crop&q=80"
-                                alt="Intimate Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Intimate Gathering</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Perfect for close family celebrations
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Elegant decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        4-hour event
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
 
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden transform scale-105">
-                            <div className="bg-purple-600 text-white text-center py-2">
-                                Most Popular
-                            </div>
-                            <img
-                                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80"
-                                alt="Premium Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Grand Celebration</h3>
-                                <p className="text-gray-600 mb-4">
-                                    A luxurious engagement experience
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Premium decorations
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        Full-day event
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80"
-                                alt="Luxury Package"
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Royal Engagement</h3>
-                                <p className="text-gray-600 mb-4">
-                                    The ultimate engagement experience
-                                </p>
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-center text-gray-600">
-                                        <Gift className="w-4 h-4 mr-2" />
-                                        Exclusive design & decor
-                                    </li>
-                                    <li className="flex items-center text-gray-600">
-                                        <Calendar className="w-4 h-4 mr-2" />
-                                        Weekend celebration
-                                    </li>
-                                </ul>
-                                <button className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-300">
-                                    Select Package
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             {/* Contact Section */}
             <div className="py-20 bg-white">
