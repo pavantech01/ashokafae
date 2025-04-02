@@ -5,7 +5,7 @@ function WeddingEvent() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-primbg-secondaryto-pink-50">
             {/* Hero Section */}
-            <div className="relative h-[600px]">
+            {/* <div className="relative h-[600px]">
                 <img
                     src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80"
                     alt="Wedding Celebration"
@@ -24,6 +24,27 @@ function WeddingEvent() {
                                 Plan Your Wedding
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div> */}
+
+            <div className="relative h-[400px] min-w-full">
+                <img
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80"
+                    alt="Wedding Celebration"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50">
+                    <div className="container mx-auto px-4 h-full flex flex-col items-center justify-center">
+                        <h1 className="text-6xl font-light text-white mb-4 font-serif italic">
+                            Create Your Dream Wedding
+                        </h1>
+                        <p className="text-xl text-gray-200 max-w-2xl text-center">
+                            Let us transform your special day into an unforgettable celebration of love
+                        </p>
+                        <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-secondary hover:text-white transition duration-100 cursor-pointer mt-6">
+                            Plan Your Wedding
+                        </button>
                     </div>
                 </div>
             </div>
@@ -60,7 +81,7 @@ function WeddingEvent() {
                 </div>
             </div>
 
-            
+
             {/* Contact Section */}
             <div className="py-20 bg-white">
                 <div className="container mx-auto px-4">

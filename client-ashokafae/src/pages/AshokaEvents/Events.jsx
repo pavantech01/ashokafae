@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ContactUs from '../../components/ContactUs/ContactUs';
 
 function EventCard({ title, description, features, image }) {
@@ -27,9 +28,11 @@ function EventCard({ title, description, features, image }) {
                     🌟 Early Bird Offer: Extra 5% Off For Bookings 30 Days In Advance!
                 </p>
 
-                <button className="bg-emerald-500 text-white px-4 py-2 text-sm rounded-full shadow-md hover:bg-emerald-600 transition-all">
-                    More
-                </button>
+                <Link to="/contact">
+                    <button className="bg-emerald-500 text-white px-4 py-2 text-sm rounded-full shadow-md hover:bg-emerald-600 transition-all">
+                        More
+                    </button>
+                </Link>
             </div>
         </div>
     );
@@ -96,7 +99,8 @@ function Events() {
                         <p className="text-lg text-gray-600">Creating Unforgettable Moments, One Event at a Time</p>
                     </div>
 
-                    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 place-items-center">
+                    {/* <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 place-items-center"> */}
+                    <div className="grid grid-cols-2 gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                         {events.map((event, index) => (
                             <EventCard key={index} {...event} />
                         ))}
