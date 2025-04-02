@@ -5,7 +5,7 @@ function PhotoBooth() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50">
             {/* Hero Section */}
-            <div className="relative h-[600px]">
+            {/* <div className="relative h-[600px]">
                 <img
                     src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80"
                     alt="Photu Booth"
@@ -24,6 +24,23 @@ function PhotoBooth() {
                                 Design Your Booth
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div> */}
+            <div className="relative h-[400px] min-w-full">
+                <img
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80"
+                    alt="Photu Booth"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50">
+                    <div className="container mx-auto px-4 h-full flex flex-col items-center justify-center">
+                        <h1 className="text-4xl font-light text-white mb-4 font-serif italic">
+                            Creative Photo Booths
+                        </h1>
+                        <p className="text-xl text-gray-200 max-w-2xl text-center">
+                            Capture magical moments with our stunning photo booth setups
+                        </p>
                     </div>
                 </div>
             </div>
@@ -124,13 +141,6 @@ function PhotoBooth() {
                     </div>
                 </div>
             </div>
-
-            {/* Footer */}
-            <footer className="bg-gray-50 py-8">
-                <div className="container mx-auto px-4 text-center text-gray-600">
-                    <p>© 2024 Photo Booth Designs. All rights reserved.</p>
-                </div>
-            </footer>
         </div>
     );
 }

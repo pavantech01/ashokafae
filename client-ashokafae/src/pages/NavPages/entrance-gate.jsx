@@ -5,7 +5,7 @@ function EntranceGate() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
             {/* Hero Section */}
-            <div className="relative h-[600px]">
+            {/* <div className="relative h-[600px]">
                 <img
                     src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80"
                     alt="Entrance Gate"
@@ -24,6 +24,25 @@ function EntranceGate() {
                                 Explore Designs
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div> */}
+            <div className="relative h-[400px] min-w-full">
+                <img
+                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80"
+                    alt="Entrance Gate"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50">
+                    <div className="container mx-auto px-4 h-full flex flex-col items-center justify-center">
+                        <h1 className="text-5xl font-light text-white mb-4 font-serif italic">
+                            Grand Entrance Designs
+                        </h1>
+                        <p className="text-xl text-gray-200 max-w-2xl text-center">
+                            Make a stunning first impression with our elegant entrance gate decorations                    </p>
+                        <button className="bg-white text-amber-600 px-8 py-3 rounded-full font-semibold hover:bg-amber-50 transition duration-300 mt-6 cursor-pointer">
+                            Explore Designs
+                        </button>
                     </div>
                 </div>
             </div>
