@@ -52,7 +52,7 @@ const WeddingPlannerWebsite = () => {
             <hr className="block md:hidden border-white border-solid border-2 bg-gray-50" />
             {/* <TopButton/> */}
             {/* Hero Section */} 
-            <HeroCarousel/>           
+            <HeroCarousel/>             
             {/* <section className="relative min-h-screen">
                 <div className="relative">
                     <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer">

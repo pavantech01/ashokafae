@@ -28,8 +28,8 @@ const HeroCarousel = () => {
     };
 
     return (
-        <section className="relative w-full h-screen overflow-hidden">
-            <div className="relative w-full h-full lg:h-[94vh]">
+        <section className="overflow-hidden">
+            <div className="relative w-full max-h-80vh h-[94vh] md:h-[40vh] lg:h-[50vh]">
                 {images.map((img, index) => (
                     <motion.img
                         key={index}
@@ -69,7 +69,7 @@ const HeroCarousel = () => {
                     {images.map((_, index) => (
                         <div
                             key={index}
-                            className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-white" : "bg-gray-400"}`}
+                            className={`w-2 h-2 rounded-full ${index === currentIndex ? "bg-white" : "bg-gray-400"}`}
                             onClick={() => setCurrentIndex(index)}
                         />
                     ))}

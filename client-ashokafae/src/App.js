@@ -32,6 +32,8 @@ import EntranceGate from './pages/NavPages/entrance-gate';
 import VidhiMandap from './pages/NavPages/vidhi-mandap';
 import SpecialEntry from './pages/NavPages/special-entry';
 import PhotoBooth from './pages/NavPages/photo-booth';
+import EventView from './pages/NavPages/event-view';
+import AdminAuthPage from './pages/NavPages/Admin/AdminMain/AdminAuthPage';
 
 function App() {
   return (
@@ -70,6 +72,8 @@ function App() {
           <Route path="/events/vidhi-mandap" element={<VidhiMandap />} />
           <Route path="/events/special-entry" element={<SpecialEntry />} />
           <Route path="/events/photo-booth" element={<PhotoBooth />} />
+          <Route path="/events/event/:id" element={<EventView />} /> {/* New route for event view */}
+          <Route path="/admin-auth-page" element={<AdminAuthPage />} /> 
 
           {/* Notfound */}
           <Route path="*" element={<PageNotFound />} />
