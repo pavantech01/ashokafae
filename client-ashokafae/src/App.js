@@ -34,6 +34,8 @@ import SpecialEntry from './pages/NavPages/special-entry';
 import PhotoBooth from './pages/NavPages/photo-booth';
 import EventView from './pages/NavPages/event-view';
 import AdminAuthPage from './pages/NavPages/Admin/AdminMain/AdminAuthPage';
+import AddServiceForm from './pages/NavPages/Admin/AddService/AddServiceForm';
+import AddEventForm from './pages/NavPages/Admin/AddEvent/AddEventForm';
 
 function App() {
   return (
@@ -73,7 +75,9 @@ function App() {
           <Route path="/events/special-entry" element={<SpecialEntry />} />
           <Route path="/events/photo-booth" element={<PhotoBooth />} />
           <Route path="/events/event/:id" element={<EventView />} /> {/* New route for event view */}
-          <Route path="/admin-auth-page" element={<AdminAuthPage />} /> 
+          <Route path="/admin-auth-page" element={<AdminAuthPage />} />
+          <Route path="/add-service" element={<AddServiceForm />} />
+          <Route path="/add-event" element={<AddEventForm />} />
 
           {/* Notfound */}
           <Route path="*" element={<PageNotFound />} />
