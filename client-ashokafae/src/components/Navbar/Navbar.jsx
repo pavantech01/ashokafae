@@ -420,7 +420,8 @@ const Navbar = () => {
                             className="flex items-start gap-2 text-gray-700 hover:text-black focus:outline-none border-none bg-transparent cursor-pointer"
                         >
                             <img
-                                src={user?.profileImage || "https://i.pravatar.cc/40"}
+                                // src={user?.profileImage || "https://i.pravatar.cc/40"}
+                                src="https://i.pravatar.cc/40"
                                 alt="Profile"
                                 className="w-10 h-10 rounded-full object-cover border-none bg-transparent"
                             />
