@@ -78,7 +78,6 @@ function App() {
           <Route path="/admin-auth-page" element={<AdminAuthPage />} />
           <Route path="/add-service" element={<AddServiceForm />} />
           <Route path="/add-event" element={<AddEventForm />} />
-
           {/* Notfound */}
           <Route path="*" element={<PageNotFound />} />
 
