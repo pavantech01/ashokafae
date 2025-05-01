@@ -3,46 +3,21 @@ const mongoose = require('mongoose');
 const eventSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    required: [true, 'Event title is required'],
     trim: true
   },
   description: {
     type: String,
-    required: true
+    required: [true, 'Event description is required'],
   },
-  date: {
-    type: Date,
-    required: true
-  },
-  location: {
-    type: String,
-    required: true
-  },
-  capacity: {
-    type: Number,
-    required: true
-  },
-  price: {
-    type: Number,
-    required: true
-  },
-  organizer: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    // required: true
-  },
-  attendees: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
-  }],
   status: {
     type: String,
-    enum: ['draft', 'published', 'cancelled', 'completed'],
+    enum: ['draft', 'live', 'cancelled'],
     default: 'draft'
   },
   category: {
     type: String,
-    required: true
+    required: [true, 'Event category is required'],
   },
   image: {
     public_id: String, // Cloudinary public ID

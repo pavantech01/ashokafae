@@ -6,10 +6,14 @@ const role = require('../middleware/role.middleware');
 const upload = require('../middleware/upload.middleware');
 
 // Modified routes to match /api/events prefix
+// router.post('/',
+//     auth,
+//     upload.single('image'),
+//     eventController.createEvent);
+
 router.post('/',
-    auth,
     upload.single('image'),
-    eventController.createEvent);
+    eventController.addEvent);
 
 // Make this public as per test requirements
 router.get('/', eventController.getAllEvents);

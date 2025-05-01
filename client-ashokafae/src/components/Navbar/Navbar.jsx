@@ -420,12 +420,6 @@ const Navbar = () => {
                                 onClick={toggleProfileDropdown}
                                 className="flex items-start gap-2 text-gray-700 hover:text-black focus:outline-none border-none bg-transparent cursor-pointer"
                             >
-                                {/* <img
-                    // src={user?.profileImage || "https://i.pravatar.cc/40"}
-                    src="https://i.pravatar.cc/40"
-                    alt="Profile"
-                    className="w-10 h-10 rounded-full object-cover border-none bg-transparent"
-                /> */}
                                 <FaUserCircle size={30} />
                             </button>
 
@@ -453,7 +447,7 @@ const Navbar = () => {
                 ) : (
                     <Link
                         to="/authUser"
-                        className="bg-secondary text-white px-4 py-2 font-rounded capitalize rounded no-underline text-xs cursor-pointer hover:bg-slate-500 transition duration-300"
+                        className="relative bg-secondary text-white px-4 py-2 font-rounded capitalize rounded no-underline text-xs cursor-pointer hover:bg-slate-500 transition duration-300"
                     >
                         Sign Up
                     </Link>
