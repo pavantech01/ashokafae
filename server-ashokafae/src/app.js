@@ -6,18 +6,37 @@ const authRoutes = require('./routes/auth.routes');
 const eventRoutes = require('./routes/event.routes');
 const paymentRoutes = require('./routes/payment.routes');
 const userRoutes = require('./routes/user.routes');
-const productRoutes = require('./routes/product.routes'); 
+const productRoutes = require('./routes/product.routes');
 
 const bodyParser = require('body-parser');
 const contactRoutes = require('./routes/contact.routes');
-const connectDB = require('./config/db.config'); 
+const connectDB = require('./config/db.config');
 
 
 
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+// const allowedOrigins = ['http://ashokafae.onrender.com']; 
+const allowedOrigins = ['http://localhost:3000', 'https://ashokafae.onrender.com']; 
+
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true, // if your frontend sends cookies or Authorization headers
+}));
+
+app.options('*', cors()); // Handle preflight requests
+
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
