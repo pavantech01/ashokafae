@@ -18,6 +18,10 @@ router.post('/',
 // Make this public as per test requirements
 router.get('/', eventController.getAllEvents);
 
+router.get('/category/:category',
+    eventController.getEventsByCategory);
+
+
 // Make this public as per test requirements
 router.get('/:id', eventController.getEventById);
 

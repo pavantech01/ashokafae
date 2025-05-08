@@ -74,6 +74,7 @@
 // };
 
 // module.exports = { eventController };
+
 const eventService = require('../services/event.service');
 const notificationService = require('../services/notification.service');
 const catchAsync = require('../utils/catchAsync');
@@ -107,6 +108,13 @@ const eventController = {
         res.status(200).json(events);
     }),
 
+    getEventsByCategory: catchAsync(async (req, res) => {
+        const category = req.params.category.toLowerCase();
+        const events = await Event.find({ category }).sort({ createdAt: -1 });
+        res.status(200).json(events);
+    }),
+    
+    
     getEventById: catchAsync(async (req, res) => {
         const event = await Event.findById(req.params.id);
         if (!event) throw new ApiError(404, 'Event not found');
