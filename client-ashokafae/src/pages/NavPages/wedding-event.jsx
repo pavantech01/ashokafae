@@ -95,12 +95,15 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Heart, Calendar, Package, Star, Phone } from 'lucide-react';
 import { Base_URL } from '../../utils/api';
-const navigate = useNavigate();
+import { useNavigate } from 'react-router-dom';
+
 
 
 function WeddingEvent() {
     const [weddingEvents, setWeddingEvents] = useState([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         const fetchWeddingEvents = async () => {
