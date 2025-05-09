@@ -21,6 +21,7 @@ import Events from './pages/AshokaEvents/Events';
 import TopButton from './components/TopButton/TopButton';
 
 import WeddingEvent from './pages/NavPages/wedding-event';
+import ViewEventDetail from './pages/NavPages/ViewEventDetail';
 import EngagementEvent from './pages/NavPages/engagement-event';
 import AnniversaryCeremony from './pages/NavPages/anniversary-ceremony';
 import BirthdayParty from './pages/NavPages/birthday-party';
@@ -78,6 +79,7 @@ function App() {
           <Route path="/admin-auth-page" element={<AdminAuthPage />} />
           <Route path="/add-service" element={<AddServiceForm />} />
           <Route path="/add-event" element={<AddEventForm />} />
+          <Route path="/event/:id" element={<ViewEventDetail />} />
           {/* Notfound */}
           <Route path="*" element={<PageNotFound />} />
 
