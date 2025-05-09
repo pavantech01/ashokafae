@@ -168,7 +168,11 @@ function WeddingEvent() {
 
                         <div className="grid md:grid-cols-3 gap-8">
                             {weddingEvents.map((event) => (
-                                <div key={event._id} className="border rounded-xl p-6 shadow-lg transition-transform transform hover:scale-105">
+                                <div 
+                                    key={event._id} 
+                                    className="border rounded-xl p-6 shadow-lg transition-transform transform hover:scale-105"
+                                    onClick={() => navigate(`/event/${event._id}`)}
+                                    >
                                     <img src={event.image?.url} alt={event.title} className="h-48 w-full object-cover rounded-lg mb-4" />
                                     <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
                                     {/* <p className="text-gray-600 mb-2">{event.description}</p> */}
