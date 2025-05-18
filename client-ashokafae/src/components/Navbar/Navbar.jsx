@@ -247,22 +247,20 @@
 
 // export default Navbar;
 
-import React, { useState, useEffect, useRef } from 'react';
+
+
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaUserCircle } from "react-icons/fa";
-import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
-import { useAuth } from '../../utils/AuthContext'; // Import the useAuth hook
+import { Menu, X, ChevronDown, ChevronRight, User } from 'lucide-react';
+import { useAuth } from '../../utils/AuthContext';
+import EnhancedProfileDropdown from './EnhancedProfileDropdown';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [mobileExpandedItems, setMobileExpandedItems] = useState({});
-    const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation(); // Get the current location object
-    const { user, logout } = useAuth(); // Get user and logout from AuthContext
-    const profileDropdownRef = useRef(null);
-
-    // Derived state from context
+    const location = useLocation();
+    const { user, logout } = useAuth();
     const isLoggedIn = !!user;
     const isAdmin = user?.role === 'admin';
 
@@ -272,11 +270,6 @@ const Navbar = () => {
             const button = document.getElementById('hamburger-button');
             if (menu && !menu.contains(event.target) && !button.contains(event.target)) {
                 setIsMenuOpen(false);
-            }
-
-            // Close profile dropdown when clicking outside
-            if (profileDropdownRef.current && !profileDropdownRef.current.contains(event.target)) {
-                setProfileDropdownOpen(false);
             }
         };
 
@@ -288,10 +281,6 @@ const Navbar = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-    };
-
-    const toggleProfileDropdown = () => {
-        setProfileDropdownOpen(!profileDropdownOpen);
     };
 
     const toggleMobileExpandedItem = (item) => {
@@ -310,21 +299,20 @@ const Navbar = () => {
 
     const handleLogout = () => {
         logout();
-        setProfileDropdownOpen(false);
         navigate('/');
     };
 
     const navItems = ["HOME", "EVENTS", "OUR SERVICES", "GALLERY", "ABOUT", "CONTACT"];
 
     return (
-        <nav className="sticky top-0 left-0 w-full h-14 shadow-md z-50 flex items-center justify-between px-4 lg:px-6 bg-white">
+        <nav className="sticky top-0 left-0 w-full h-12 shadow-md z-50 flex items-center justify-between px-4 lg:px-6 bg-white">
             {/* Logo - Left Side */}
             <div className="flex items-center">
                 <Link to="/" className="block h-12">
                     <img
                         src="https://res.cloudinary.com/dauyjkqmu/image/upload/v1738000071/ashoka-events-logo_juz99g.png"
                         alt="Ashoka"
-                        className="h-12 w-auto object-contain"
+                        className="h-11 w-auto object-contain"
                     />
                 </Link>
             </div>
@@ -346,25 +334,25 @@ const Navbar = () => {
                                     {item}
                                 </Link>
                                 {item === "EVENTS" && (
-                                    <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg min-w-[200px]">
+                                    <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg min-w-[200px] rounded-md">
                                         <div className="relative group/nested">
-                                            <Link to="/events/wedding-event" className="block text-xs px-4 py-2 font-rounded capitalize text-black no-underline hover:bg-gray-200">
+                                            <Link to="/events/wedding-event" className="block text-xs px-4 py-2 font-rounded capitalize text-black no-underline hover:bg-gray-100 transition-colors duration-150">
                                                 Wedding Event
                                             </Link>
-                                            <div className="absolute left-full top-0 hidden group-hover/nested:block bg-white shadow-lg min-w-[200px] no-underline text-xs">
-                                                <Link to="/events/haldi-decoar" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Haldi Decoar</Link>
-                                                <Link to="/events/mehndi-ceremony" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Mehndi Ceremony</Link>
-                                                <Link to="/events/reception-stage" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Reception Stage</Link>
-                                                <Link to="/events/entrance-gate" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Entrance Gate</Link>
-                                                <Link to="/events/vidhi-mandap" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Vidhi Mandap</Link>
-                                                <Link to="/events/special-entry" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Special Entry</Link>
-                                                <Link to="/events/photo-booth" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Photo Booth</Link>
+                                            <div className="absolute left-full top-0 hidden group-hover/nested:block bg-white shadow-lg min-w-[200px] rounded-md">
+                                                <Link to="/events/haldi-decoar" className="block px-4 py-2 text-xs text-gray-700 no-underline hover:bg-gray-100 transition-colors duration-150">Haldi Decoar</Link>
+                                                <Link to="/events/mehndi-ceremony" className="block px-4 py-2 text-xs text-gray-700 no-underline hover:bg-gray-100 transition-colors duration-150">Mehndi Ceremony</Link>
+                                                <Link to="/events/reception-stage" className="block px-4 py-2 text-xs text-gray-700 no-underline hover:bg-gray-100 transition-colors duration-150">Reception Stage</Link>
+                                                <Link to="/events/entrance-gate" className="block px-4 py-2 text-xs text-gray-700 no-underline hover:bg-gray-100 transition-colors duration-150">Entrance Gate</Link>
+                                                <Link to="/events/vidhi-mandap" className="block px-4 py-2 text-xs text-gray-700 no-underline hover:bg-gray-100 transition-colors duration-150">Vidhi Mandap</Link>
+                                                <Link to="/events/special-entry" className="block px-4 py-2 text-xs text-gray-700 no-underline hover:bg-gray-100 transition-colors duration-150">Special Entry</Link>
+                                                <Link to="/events/photo-booth" className="block px-4 py-2 text-xs text-gray-700 no-underline hover:bg-gray-100 transition-colors duration-150">Photo Booth</Link>
                                             </div>
                                         </div>
-                                        <Link to="/events/engagement-event" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Engagement Event</Link>
-                                        <Link to="/events/anniversary-ceremony" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Anniversary Ceremony</Link>
-                                        <Link to="/events/birthday-party" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Birthday Party</Link>
-                                        <Link to="/events/baby-shower" className="block px-4 py-2 font-rounded capitalize text-black no-underline text-xs hover:bg-gray-200">Baby Shower</Link>
+                                        <Link to="/events/engagement-event" className="block px-4 py-2 text-xs no-underline text-gray-700 hover:bg-gray-100 transition-colors duration-150">Engagement Event</Link>
+                                        <Link to="/events/anniversary-ceremony" className="block px-4 py-2 text-xs no-underline text-gray-700 hover:bg-gray-100 transition-colors duration-150">Anniversary Ceremony</Link>
+                                        <Link to="/events/birthday-party" className="block px-4 py-2 text-xs no-underline text-gray-700 hover:bg-gray-100 transition-colors duration-150">Birthday Party</Link>
+                                        <Link to="/events/baby-shower" className="block px-4 py-2 text-xs no-underline text-gray-700 hover:bg-gray-100 transition-colors duration-150">Baby Shower</Link>
                                     </div>
                                 )}
                             </div>
@@ -372,97 +360,29 @@ const Navbar = () => {
                     })}
                 </div>
 
-                {/* Profile Icon with Dropdown*/}
-                {/* <div className="relative ml-2" ref={profileDropdownRef}>
-                    {isLoggedIn ? (
-                        <>
-                            <button
-                                onClick={toggleProfileDropdown}
-                                className="flex items-center justify-center text-gray-700 hover:text-gray-900 focus:outline-none border-none bg-transparent"
-                            >
-                                <FaUserCircle size={30} />
-                            </button>
-
-                            {profileDropdownOpen && (
-                                <div className="absolute right-8 mt-2 lg:min-w-full rounded-md shadow-lg ring-1 ring-black/10 z-50 ">
-                                    {isAdmin && (
-                                        <Link
-                                            to="/admin-auth-page"
-                                            className="block px-4 py-2 text-sm text-white hover:bg-gray-100 no-underline"
-                                            onClick={() => setProfileDropdownOpen(false)}
-                                        >
-                                            Admin
-                                        </Link>
-                                    )}
-                                    <div
-                                        onClick={handleLogout}
-                                        className="w-full text-left block px-4 py-2 text-sm text-white hover:bg-gray-100 "
-                                    >
-                                        Logout
-                                    </div>
-                                </div>
-                            )}
-                        </>
-
-                    ) : (
-                        <Link
-                            to="/authUser"
-                            className="bg-secondary text-white px-4 py-2 font-rounded capitalize rounded no-underline text-xs cursor-pointer hover:bg-slate-500 transition duration-300"
-                        >
-                            Sign Up
-                        </Link>
-                    )}
-                </div> */}
                 {isLoggedIn ? (
-                    <>
-                        <div ref={profileDropdownRef} className="relative">
-                            <button
-                                onClick={toggleProfileDropdown}
-                                className="flex items-start gap-2 text-gray-700 hover:text-black focus:outline-none border-none bg-transparent cursor-pointer"
-                            >
-                                <FaUserCircle size={30} />
-                            </button>
-
-                            {profileDropdownOpen && (
-                                <div className="absolute right-0 top-14 bg-white py-1 z-50 shadow-md rounded">
-                                    {isAdmin && (
-                                        <Link
-                                            to="/admin-auth-page"
-                                            className="block px-4 py-2 text-sm no-underline text-gray-700 hover:bg-gray-100"
-                                            onClick={() => setProfileDropdownOpen(false)}
-                                        >
-                                            ADMIN
-                                        </Link>
-                                    )}
-                                    <button
-                                        onClick={handleLogout}
-                                        className="w-full text-left px-4 py-2 text-xs text-red-600 hover:bg-gray-100 border-none bg-transparent"
-                                    >
-                                        LOGOUT
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                    </>
+                    <EnhancedProfileDropdown 
+                        user={user}
+                        onLogout={handleLogout}
+                        isAdmin={isAdmin}
+                    />
                 ) : (
                     <Link
                         to="/authUser"
-                        className="relative bg-secondary text-white px-4 py-2 font-rounded capitalize rounded no-underline text-xs cursor-pointer hover:bg-slate-500 transition duration-300"
+                        className="relative bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition-colors duration-200"
                     >
                         Sign Up
                     </Link>
                 )}
-
-
             </div>
 
             {/* Hamburger Menu Button */}
             <button
                 id="hamburger-button"
                 onClick={toggleMenu}
-                className="lg:hidden p-2 text-black no-underline text-xs hover:text-gray-600 bg-transparent border-0 focus:outline-none"
+                className="lg:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
             >
-                {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
             {/* Mobile Menu */}
@@ -479,47 +399,47 @@ const Navbar = () => {
                                     {item === "EVENTS" ? (
                                         <div className="w-full">
                                             <div
-                                                className={`flex justify-center items-center text-black no-underline text-lg hover:text-gray-600 py-2 font-rounded capitalize transition duration-300 ${isActive ? 'bg-green-500 text-white' : ''}`}
+                                                className={`flex justify-between items-center text-gray-700 py-2 cursor-pointer ${isActive ? 'text-green-500 font-medium' : ''}`}
                                                 onClick={() => toggleMobileExpandedItem(item)}
                                             >
-                                                <span className="pl-2">{item}</span>
-                                                {isExpanded ? <MdKeyboardArrowDown size={24} /> : <MdKeyboardArrowRight size={24} />}
+                                                <span>{item}</span>
+                                                {isExpanded ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
                                             </div>
 
                                             {isExpanded && (
                                                 <div className="pl-4 mt-1 border-l-2 border-gray-200">
                                                     <div className="w-full">
                                                         <div
-                                                            className="flex justify-between items-center text-black no-underline text-base py-2 font-rounded capitalize"
+                                                            className="flex justify-between items-center text-gray-700 py-2 cursor-pointer"
                                                             onClick={() => toggleMobileNestedItem('wedding')}
                                                         >
                                                             <span>Wedding Event</span>
-                                                            {mobileExpandedItems['nested-wedding'] ? <MdKeyboardArrowDown size={20} /> : <MdKeyboardArrowRight size={20} />}
+                                                            {mobileExpandedItems['nested-wedding'] ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
                                                         </div>
 
                                                         {mobileExpandedItems['nested-wedding'] && (
                                                             <div className="pl-4 border-l-2 border-gray-200">
-                                                                <Link to="/events/haldi-decoar" className="block py-2 text-black no-underline text-sm">Haldi Decoar</Link>
-                                                                <Link to="/events/mehndi-ceremony" className="block py-2 text-black no-underline text-sm">Mehndi Ceremony</Link>
-                                                                <Link to="/events/reception-stage" className="block py-2 text-black no-underline text-sm">Reception Stage</Link>
-                                                                <Link to="/events/entrance-gate" className="block py-2 text-black no-underline text-sm">Entrance Gate</Link>
-                                                                <Link to="/events/vidhi-mandap" className="block py-2 text-black no-underline text-sm">Vidhi Mandap</Link>
-                                                                <Link to="/events/special-entry" className="block py-2 text-black no-underline text-sm">Special Entry</Link>
-                                                                <Link to="/events/photo-booth" className="block py-2 text-black no-underline text-sm">Photo Booth</Link>
+                                                                <Link to="/events/haldi-decoar" className="block py-2 text-gray-600 no-underline hover:text-gray-900">Haldi Decoar</Link>
+                                                                <Link to="/events/mehndi-ceremony" className="block py-2 text-gray-600 hover:text-gray-900">Mehndi Ceremony</Link>
+                                                                <Link to="/events/reception-stage" className="block py-2 text-gray-600 hover:text-gray-900">Reception Stage</Link>
+                                                                <Link to="/events/entrance-gate" className="block py-2 text-gray-600 hover:text-gray-900">Entrance Gate</Link>
+                                                                <Link to="/events/vidhi-mandap" className="block py-2 text-gray-600 hover:text-gray-900">Vidhi Mandap</Link>
+                                                                <Link to="/events/special-entry" className="block py-2 text-gray-600 hover:text-gray-900">Special Entry</Link>
+                                                                <Link to="/events/photo-booth" className="block py-2 text-gray-600 hover:text-gray-900">Photo Booth</Link>
                                                             </div>
                                                         )}
                                                     </div>
-                                                    <Link to="/events/engagement-event" className="block text-black no-underline text-base py-2">Engagement Event</Link>
-                                                    <Link to="/events/anniversary-ceremony" className="block text-black no-underline text-base py-2">Anniversary Ceremony</Link>
-                                                    <Link to="/events/birthday-party" className="block text-black no-underline text-base py-2">Birthday Party</Link>
-                                                    <Link to="/events/baby-shower" className="block text-black no-underline text-base py-2">Baby Shower</Link>
+                                                    <Link to="/events/engagement-event" className="block py-2 text-gray-600 hover:text-gray-900">Engagement Event</Link>
+                                                    <Link to="/events/anniversary-ceremony" className="block py-2 text-gray-600 hover:text-gray-900">Anniversary Ceremony</Link>
+                                                    <Link to="/events/birthday-party" className="block py-2 text-gray-600 hover:text-gray-900">Birthday Party</Link>
+                                                    <Link to="/events/baby-shower" className="block py-2 text-gray-600 hover:text-gray-900">Baby Shower</Link>
                                                 </div>
                                             )}
                                         </div>
                                     ) : (
                                         <Link
                                             to={path}
-                                            className={`block text-black no-underline text-lg hover:text-gray-600 py-2 font-rounded capitalize transition duration-300 text-center ${isActive ? 'bg-green-500 text-white' : ''}`}
+                                            className={`block py-2 text-gray-700 hover:text-gray-900 ${isActive ? 'text-green-500 font-medium' : ''}`}
                                         >
                                             {item}
                                         </Link>
@@ -532,30 +452,43 @@ const Navbar = () => {
                         {!isLoggedIn ? (
                             <Link
                                 to="/authUser"
-                                className="block text-center bg-secondary text-white px-6 py-2 font-rounded capitalize rounded hover:bg-slate-500 transition duration-300 no-underline text-xs cursor-pointer"
+                                className="block w-full text-center bg-indigo-600 text-white px-4 py-2 rounded-md font-medium hover:bg-indigo-700 transition-colors duration-200"
                             >
                                 Sign Up
                             </Link>
                         ) : (
-                            <div className="border-t border-gray-200 pt-2">
-                                <div className="flex items-center justify-center mb-2">
-                                    <FaUserCircle size={28} className="text-gray-700" />
-                                    <span className="ml-2 text-gray-700 font-medium">{user?.name || 'User'}</span>
+                            <div className="border-t border-gray-200 pt-4">
+                                <div className="flex items-center gap-3 px-4 mb-4">
+                                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center text-white">
+                                        {user.avatar ? (
+                                            <img src={user.avatar} alt={user.name} className="w-full h-full rounded-full object-cover" />
+                                        ) : (
+                                            <User className="w-5 h-5" />
+                                        )}
+                                    </div>
+                                    <div>
+                                        <div className="font-medium text-gray-900">{user.name}</div>
+                                        <div className="text-sm text-gray-500">{user.email}</div>
+                                    </div>
                                 </div>
 
                                 {isAdmin && (
                                     <Link
                                         to="/admin-auth-page"
-                                        className="block py-2 text-black no-underline text-sm hover:text-gray-600 font-rounded capitalize transition duration-300 text-center"
+                                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                        onClick={() => setIsMenuOpen(false)}
                                     >
-                                        ADMIN DASHBOARD
+                                        Admin Dashboard
                                     </Link>
                                 )}
                                 <button
-                                    onClick={handleLogout}
-                                    className="block w-full text-black no-underline text-xs hover:text-gray-600 py-2 font-rounded capitalize transition duration-300 bg-transparent text-center"
+                                    onClick={() => {
+                                        handleLogout();
+                                        setIsMenuOpen(false);
+                                    }}
+                                    className="block w-full text-left px-4 py-2 text-red-600 hover:bg-red-50"
                                 >
-                                    LOGOUT
+                                    Sign Out
                                 </button>
                             </div>
                         )}

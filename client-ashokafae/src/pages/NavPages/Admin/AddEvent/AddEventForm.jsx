@@ -196,7 +196,7 @@ const AddEventForm = () => {
                     className="border-2 border-green-500 rounded-xl px-4 py-3"
                     required
                 />
-                <input
+                {/* <input
                     type="text"
                     name="category"
                     placeholder="Category *"
@@ -204,7 +204,30 @@ const AddEventForm = () => {
                     onChange={handleChange}
                     className="border-2 border-green-500 rounded-xl px-4 py-3"
                     required
-                />
+                /> */}
+
+                <select
+                    name="category"
+                    value={formData.category}
+                    onChange={handleChange}
+                    className="border-2 border-green-500 rounded-xl px-4 py-3"
+                    required
+                >
+                    <option value="">Select Category *</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="engagement">Engagement</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="baby shower">Baby Shower</option>
+                    <option value="haldi">Haldi</option>
+                    <option value="mehandi">Mehandi</option>
+                    <option value="reception">Reception</option>
+                    <option value="entrance gate">Entrance Gate</option>
+                    <option value="vidhi mantap">Vidhi Mantap</option>
+                    <option value="special entry">Special Entry</option>
+                    <option value="photo booth">Photo Booth</option>
+                </select>
+
                 <select
                     name="status"
                     value={formData.status}

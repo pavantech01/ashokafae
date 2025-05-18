@@ -171,19 +171,12 @@ function WeddingEvent() {
                                 <div key={event._id} className="border rounded-xl p-6 shadow-lg transition-transform transform hover:scale-105">
                                     <img src={event.image?.url} alt={event.title} className="h-48 w-full object-cover rounded-lg mb-4" />
                                     <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-                                    {/* <p className="text-gray-600 mb-2">{event.description}</p> */}
-                                    {/* <span className="inline-block bg-pink-100 text-pink-700 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide mb-4">
-                                        {event.category}
-                                    </span> */}
-                                    {/* <button className="bg-green-300 text-white px-4 py-2 rounded-full hover:bg-green-400 transition duration-200">
-                                        Book Now
-                                    </button> */}
                                     <div className="flex justify-between items-center px-2 py-3">
                                         <button className="cursor-pointer border-2 border-secondary text-secondary hover:bg-green-500 hover:text-white px-4 py-2 rounded-lg shadow-md">
                                             Book Now
                                         </button>
                                         <Heart className="text-red-500 w-6 h-6 cursor-pointer" />
-                                    </div>
+                                    </div>    
                                 </div>
                             ))}
                         </div>
