@@ -33,6 +33,7 @@ import VidhiMandap from './pages/NavPages/vidhi-mandap';
 import SpecialEntry from './pages/NavPages/special-entry';
 import PhotoBooth from './pages/NavPages/photo-booth';
 import EventView from './pages/NavPages/event-view';
+import ViewEventDetailPage from './pages/NavPages/ViewEventDetailPage';
 import AdminAuthPage from './pages/NavPages/Admin/AdminMain/AdminAuthPage';
 import AddServiceForm from './pages/NavPages/Admin/AddService/AddServiceForm';
 import AddEventForm from './pages/NavPages/Admin/AddEvent/AddEventForm';
