@@ -369,7 +369,7 @@ const Navbar = () => {
                 ) : (
                     <Link
                         to="/authUser"
-                        className="relative bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition-colors duration-200"
+                        className="relative bg-secondary text-white px-3 py-1 no-underline rounded-md text-sm font-medium hover:bg-gray-600 transition-colors duration-200"
                     >
                         Sign Up
                     </Link>
