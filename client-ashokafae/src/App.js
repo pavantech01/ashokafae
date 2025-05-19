@@ -75,6 +75,8 @@ function App() {
           <Route path="/events/special-entry" element={<SpecialEntry />} />
           <Route path="/events/photo-booth" element={<PhotoBooth />} />
           <Route path="/events/event/:id" element={<EventView />} /> {/* New route for event view */}
+          <Route path="/events/:id" element={<ViewEventDetailPage />} />
+
           <Route path="/admin-auth-page" element={<AdminAuthPage />} />
           <Route path="/add-service" element={<AddServiceForm />} />
           <Route path="/add-event" element={<AddEventForm />} />
