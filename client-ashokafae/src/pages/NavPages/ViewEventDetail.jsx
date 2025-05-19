@@ -15,15 +15,15 @@ const ViewEventDetail = ({ event }) => {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">{event.title}</h2>
             <p className="text-gray-700 text-lg mb-4">{event.description}</p>
             <div className="flex flex-wrap items-center gap-2 mb-4">
-                <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-semibold">
+                category : <span className="bg-green-100 text-green-700 px-3 py-1 text-sm font-semibold">
                     {event.category}
                 </span>
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+                {/* <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
                     Price: ₹{event.price}
                 </span>
                 <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">
                     Location: {event.location}
-                </span>
+                </span> */}
             </div>
             <button className="mt-4 bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg transition shadow-md">
                 Book This Event
