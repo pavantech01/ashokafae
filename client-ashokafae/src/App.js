@@ -45,8 +45,8 @@ function App() {
     
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-100">
-    {/* <Navbar /> */}
-    <DemoNavbar/>
+     <Navbar /> 
+    {/*<DemoNavbar/>*/}
         <TopButton />
         <Routes>
           <Route path="/" element={<WeddingPlannerWebsite />} />
