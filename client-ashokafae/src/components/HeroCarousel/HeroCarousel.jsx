@@ -50,7 +50,9 @@ const HeroCarousel = () => {
 
                 </div>
 
-                <div className="relative top-96 pt-10 text-center">
+                {/* <div className="relative top-96 pt-10 text-center md:top-96 md:relative lg:relative lg:top-96"> */}
+                <div className="relative pt-10 text-center top-96 md:top-96 lg:top-96">
+
                     <button class="bg-secondary hover:bg-gray-700 text-white font-bold py-2 px-6">
                         <Link to="/events" className="no-underline text-white font-bold">Event</Link>
                     </button>
