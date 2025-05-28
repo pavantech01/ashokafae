@@ -37,20 +37,15 @@ import ViewEventDetailPage from './pages/NavPages/ViewEventDetailPage';
 import AdminAuthPage from './pages/NavPages/Admin/AdminMain/AdminAuthPage';
 import AddServiceForm from './pages/NavPages/Admin/AddService/AddServiceForm';
 import AddEventForm from './pages/NavPages/Admin/AddEvent/AddEventForm';
-<<<<<<< HEAD
-import BlogsPage from './pages/NavPages/Admin/AddBlogs/BlogsPage';
-=======
-import DemoNavbar from './pages/NavPages/DemoNavbar';
 
->>>>>>> 4b10e2a5f02c8468507d05320bf95a424bdf898b
 
 function App() {
   return (
-    
+
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-100">
-     <Navbar /> 
-    {/*<DemoNavbar/>*/}
+        <Navbar />
+        {/*<DemoNavbar/>*/}
         <TopButton />
         <Routes>
           <Route path="/" element={<WeddingPlannerWebsite />} />
@@ -88,11 +83,6 @@ function App() {
           <Route path="/admin-auth-page" element={<AdminAuthPage />} />
           <Route path="/add-service" element={<AddServiceForm />} />
           <Route path="/add-event" element={<AddEventForm />} />
-<<<<<<< HEAD
-          <Route path="/blogs" element={<BlogsPage />} />
-=======
-
->>>>>>> 4b10e2a5f02c8468507d05320bf95a424bdf898b
           {/* Notfound */}
           <Route path="*" element={<PageNotFound />} />
 
