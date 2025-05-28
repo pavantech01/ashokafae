@@ -302,7 +302,7 @@ const Navbar = () => {
         navigate('/');
     };
 
-    const navItems = ["HOME", "EVENTS", "OUR SERVICES", "GALLERY", "ABOUT", "CONTACT"];
+    const navItems = ["HOME", "EVENTS", "OUR SERVICES", "GALLERY", "ABOUT", "CONTACT", "BLOGS"];
 
     return (
         <nav className="sticky top-0 left-0 w-full h-12 shadow-md z-50 flex items-center justify-between px-4 lg:px-6 bg-white">

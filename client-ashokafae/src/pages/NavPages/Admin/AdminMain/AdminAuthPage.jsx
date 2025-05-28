@@ -19,6 +19,12 @@ const cards = [
         icon: <Settings2 size={32} />,
         img: "https://img.freepik.com/premium-photo/male-hand-touching-service-concept_220873-7591.jpg",
         link: "/add-service"
+    },
+    {
+        title: "Blogs",
+        icon: <Settings2 size={32} />,
+        img: "https://wallpaperaccess.com/full/2433830.jpg",
+        link: "/blogs"
     }
 ];
 

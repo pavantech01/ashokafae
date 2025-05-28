@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <footer className="bg-black text-white py-8 px-6">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
                 {/* Branding & Copyright */}
                 <div>
                     <h2 className="text-xl font-bold text-green-400">ASHOKA</h2>
@@ -46,13 +46,13 @@ const Footer = () => {
                 </div>
 
                 {/* Subscribe */}
-                <div>
+                {/* <div>
                     <h3 className="font-semibold text-lg">Subscribe</h3>
                     <input type="email" placeholder="Email Address" className="w-full border border-gray-300 rounded p-2 mt-2" />
                     <button className="bg-red-500 text-white py-2 px-6 rounded-lg mt-2 hover:bg-red-700 transition duration-300">
                         SUBSCRIBE
                     </button>
-                </div>
+                </div> */}
             </div>
 
             {/* Contact Email */}

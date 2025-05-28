@@ -37,6 +37,7 @@ import ViewEventDetailPage from './pages/NavPages/ViewEventDetailPage';
 import AdminAuthPage from './pages/NavPages/Admin/AdminMain/AdminAuthPage';
 import AddServiceForm from './pages/NavPages/Admin/AddService/AddServiceForm';
 import AddEventForm from './pages/NavPages/Admin/AddEvent/AddEventForm';
+import BlogsPage from './pages/NavPages/Admin/AddBlogs/BlogsPage';
 
 function App() {
   return (
@@ -81,6 +82,7 @@ function App() {
           <Route path="/admin-auth-page" element={<AdminAuthPage />} />
           <Route path="/add-service" element={<AddServiceForm />} />
           <Route path="/add-event" element={<AddEventForm />} />
+          <Route path="/blogs" element={<BlogsPage />} />
           {/* Notfound */}
           <Route path="*" element={<PageNotFound />} />
 

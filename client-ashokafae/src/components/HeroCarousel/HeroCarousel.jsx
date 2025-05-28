@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
+
 
 const images = [
     "https://images.unsplash.com/photo-1519379169146-d4b170447caa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -29,7 +31,7 @@ const HeroCarousel = () => {
 
     return (
         <section className="overflow-hidden">
-            <div className="relative w-full max-h-80vh h-[94vh] md:h-[40vh] lg:h-[50vh]">
+            <div className="relative w-full max-h-80vh h-[94vh] md:h-[70vh] lg:h-[70vh]">
                 {images.map((img, index) => (
                     <motion.img
                         key={index}
@@ -48,6 +50,14 @@ const HeroCarousel = () => {
 
                 </div>
 
+                <div className="relative top-96 pt-10 text-center">
+                    <button class="bg-secondary hover:bg-gray-700 text-white font-bold py-2 px-6">
+                        <Link to="/events" className="no-underline text-white font-bold">Event</Link>
+                    </button>
+                    <button class="bg-secondary hover:bg-gray-700 text-white font-bold py-2 px-4">
+                        <Link to="/products" className="no-underline text-white font-bold">Products</Link>
+                    </button>
+                </div>
                 {/* Left Arrow */}
                 <button
                     onClick={prevSlide}
